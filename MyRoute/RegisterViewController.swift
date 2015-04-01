@@ -12,7 +12,7 @@ import Alamofire
 
 class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
-//    var location: Dictionary<String,[String]>?
+    var location: NSArray?
 //    var selectedProvince:String?
 //    var selectedCity:String?
     
@@ -47,7 +47,7 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
         
         initRegiterVC()
         createTapGesture()
-       // readProvinceCityInfo()
+        readProvinceCityInfo()
     }
     
     //MARK: ---读取沙盒中的文件ProvincesAndCities.plist----
@@ -78,8 +78,7 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
         let resultArray = NSMutableArray(contentsOfFile: path)
         println("ProvincesAndCities.plist file is --> \(resultArray?.description)")
 
-        var array = NSMutableArray(contentsOfFile:path)
-        print(array)
+        location = resultArray
     }
     
     func  initRegiterVC(){
@@ -435,7 +434,7 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
             var bFileDeleted: Bool = NSFileManager.defaultManager().removeItemAtPath(filePath, error: nil)
             
             if bFileDeleted {
-                
+
                 println("delete success !")
             } else {
                 println("delete error !")
@@ -457,10 +456,9 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
         var m_ProvinceTableVC = ProvinceTableViewController()
         m_ProvinceTableVC.title = "选择省份"
         m_ProvinceTableVC.registerViewController = self
+        m_ProvinceTableVC.location = self.location
         self.navigationController?.pushViewController(m_ProvinceTableVC, animated: true)
     
-        
-        
     }
    
     //MARK:---切换到手机验证码页面---
@@ -472,3 +470,5 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
         
     }
 }
+
+

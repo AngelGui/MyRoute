@@ -29,7 +29,7 @@ class OrderPageViewController: UIViewController, MAMapViewDelegate{
         
         initToolBar()
         initMapView()
-        initBoardView()
+        //initBoardView()
         createProgressView()
     }
     
@@ -44,6 +44,13 @@ class OrderPageViewController: UIViewController, MAMapViewDelegate{
         label.font = UIFont.systemFontOfSize(18.0)
         label.hidden = true
         self.view.addSubview(label)
+        
+        var provisionImage = UIImage(named: "provision.png")
+        CancelBt.setImage(provisionImage, forState: UIControlState.Normal)
+        CancelBt.frame = CGRect(x: 110, y: self.view.frame.height-190, width: 100, height: 100)
+        CancelBt.addTarget(self, action: "changeToMainVC", forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(CancelBt)
+        
         
         timer?.invalidate()
         timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateTime:", userInfo: nil, repeats: true)

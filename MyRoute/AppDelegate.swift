@@ -5,10 +5,10 @@
 //  Created by xiaoming han on 14-7-21.
 //  Copyright (c) 2014 AutoNavi. All rights reserved.
 //
-//zenme 回事？
+
 import UIKit
 
-let APIKey = "49a2366789105cfc0ef47f2500e7ca7d"
+let APIKey = "477b7777d055e6f2f4576caacb002d55"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

@@ -47,7 +47,7 @@
 		3EA26F781AC9616100DC7777 /* CodeTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA26F771AC9616100DC7777 /* CodeTestViewController.swift */; };
 		3EF92C981ACA4B150031AC86 /* orderWin.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EF92C971ACA4B150031AC86 /* orderWin.png */; };
 		3EF92C9A1ACA524D0031AC86 /* PopOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF92C991ACA524D0031AC86 /* PopOrderViewController.swift */; };
-		3EF92C9E1ACA65B70031AC86 /* ProvinceTableViewController1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF92C9D1ACA65B70031AC86 /* ProvinceTableViewController1.swift */; };
+		3EF92C9E1ACA65B70031AC86 /* ProvinceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF92C9D1ACA65B70031AC86 /* ProvinceTableViewController.swift */; };
 		3EF92CA61ACA7B7D0031AC86 /* CitiesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF92CA51ACA7B7D0031AC86 /* CitiesTableView.swift */; };
 		3EF92CAB1ACA9ED90031AC86 /* CityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF92CAA1ACA9ED90031AC86 /* CityTableViewController.swift */; };
 		3EF92CAD1ACAB4290031AC86 /* OrderPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF92CAC1ACAB4290031AC86 /* OrderPageViewController.swift */; };
@@ -66,7 +66,6 @@
 		3EF92D4E1ACBDF100031AC86 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF92D4B1ACBDF040031AC86 /* Alamofire.framework */; };
 		3EF92D4F1ACBDF380031AC86 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF92D4B1ACBDF040031AC86 /* Alamofire.framework */; };
 		3EF92D501ACBDF380031AC86 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF92D4B1ACBDF040031AC86 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		3EF92D551ACC06450031AC86 /* ProvinceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF92D541ACC06450031AC86 /* ProvinceTableViewController.swift */; };
 		8101BE29197CBBFC0042E4EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8101BE28197CBBFC0042E4EA /* AppDelegate.swift */; };
 		8101BE2E197CBBFC0042E4EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8101BE2C197CBBFC0042E4EA /* Main.storyboard */; };
 		8101BE30197CBBFC0042E4EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8101BE2F197CBBFC0042E4EA /* Images.xcassets */; };
@@ -173,7 +172,7 @@
 		3EA26F771AC9616100DC7777 /* CodeTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeTestViewController.swift; sourceTree = "<group>"; };
 		3EF92C971ACA4B150031AC86 /* orderWin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orderWin.png; sourceTree = "<group>"; };
 		3EF92C991ACA524D0031AC86 /* PopOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopOrderViewController.swift; sourceTree = "<group>"; };
-		3EF92C9D1ACA65B70031AC86 /* ProvinceTableViewController1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvinceTableViewController1.swift; sourceTree = "<group>"; };
+		3EF92C9D1ACA65B70031AC86 /* ProvinceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvinceTableViewController.swift; sourceTree = "<group>"; };
 		3EF92CA51ACA7B7D0031AC86 /* CitiesTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitiesTableView.swift; sourceTree = "<group>"; };
 		3EF92CAA1ACA9ED90031AC86 /* CityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityTableViewController.swift; sourceTree = "<group>"; };
 		3EF92CAC1ACAB4290031AC86 /* OrderPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderPageViewController.swift; sourceTree = "<group>"; };
@@ -191,7 +190,6 @@
 		3EF92CCB1ACBA6730031AC86 /* provision.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = provision.png; sourceTree = "<group>"; };
 		3EF92D451ACBDF040031AC86 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		3EF92D531ACBF1EB0031AC86 /* duangduang拉屎服务协议.doc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "duangduang拉屎服务协议.doc"; sourceTree = "<group>"; };
-		3EF92D541ACC06450031AC86 /* ProvinceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvinceTableViewController.swift; sourceTree = "<group>"; };
 		8101BE23197CBBFC0042E4EA /* map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = map.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8101BE27197CBBFC0042E4EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8101BE28197CBBFC0042E4EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -382,8 +380,7 @@
 				3E37088F1AC537FC00E28C6B /* ProgressView.swift */,
 				3E3708931AC5461700E28C6B /* UIImage+Gif.swift */,
 				3EA26F4A1AC3F8E100DC7777 /* RegisterViewController.swift */,
-				3EF92C9D1ACA65B70031AC86 /* ProvinceTableViewController1.swift */,
-				3EF92D541ACC06450031AC86 /* ProvinceTableViewController.swift */,
+				3EF92C9D1ACA65B70031AC86 /* ProvinceTableViewController.swift */,
 				3EF92CAA1ACA9ED90031AC86 /* CityTableViewController.swift */,
 				3EA26F771AC9616100DC7777 /* CodeTestViewController.swift */,
 				3EF92CAC1ACAB4290031AC86 /* OrderPageViewController.swift */,
@@ -648,11 +645,10 @@
 				3EF92CAB1ACA9ED90031AC86 /* CityTableViewController.swift in Sources */,
 				8101BE58197CEFD00042E4EA /* MainViewController.swift in Sources */,
 				3EF92CA61ACA7B7D0031AC86 /* CitiesTableView.swift in Sources */,
-				3EF92C9E1ACA65B70031AC86 /* ProvinceTableViewController1.swift in Sources */,
+				3EF92C9E1ACA65B70031AC86 /* ProvinceTableViewController.swift in Sources */,
 				3E3708901AC537FC00E28C6B /* ProgressView.swift in Sources */,
 				8101BE29197CBBFC0042E4EA /* AppDelegate.swift in Sources */,
 				3EA26F4B1AC3F8E100DC7777 /* RegisterViewController.swift in Sources */,
-				3EF92D551ACC06450031AC86 /* ProvinceTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

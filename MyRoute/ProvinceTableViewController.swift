@@ -1,8 +1,8 @@
 //
-//  PopVoiceWin.swift
+//  CitiesTableViewController.swift
 //  MyRoute
 //
-//  Created by 陈桂 on 15/3/25.
+//  Created by 陈桂 on 15/3/31.
 //  Copyright (c) 2015年 AutoNavi. All rights reserved.
 //
 
@@ -10,11 +10,8 @@ import Foundation
 
 class ProvinceTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var pDataSource: NSMutableArray?
-    var ptableView: UITableView?
-    var regionID:string?
-    var regionName: String?
-    var childrensArray: NSString
+    var dataArray: NSMutableArray?
+    var tableView: UITableView?
     var registerViewController: RegisterViewController?
     
     override func viewDidLoad() {
@@ -69,9 +66,7 @@ class ProvinceTableViewController: UIViewController, UITableViewDataSource, UITa
         
         
     }
-    override func viewDidAppear(animated: Bool) {
-        if(self.p)
-    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -85,27 +80,27 @@ class ProvinceTableViewController: UIViewController, UITableViewDataSource, UITa
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyTestCell")!
-        
+
         var string  = self.dataArray?.objectAtIndex(indexPath.row) as NSString
         cell.textLabel?.text = string
-        
+
         
         return cell
     }
     
-    
+
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath){
         
-        
+ 
         var province = self.dataArray![indexPath.row] as? String
         print(self.dataArray)
         var m_City = CityTableViewController()
         m_City.registerViewController = self.registerViewController
         m_City.selectedProvince = province
-        
-        
+
+
         self.navigationController?.pushViewController(m_City, animated: true)
-        
-    }
     
+    }
+ 
 }

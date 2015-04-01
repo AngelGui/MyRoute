@@ -27,7 +27,7 @@ class CodeTestViewController: UIViewController, UITextFieldDelegate{
     }
     
     func initCodeVC(){
-    
+        
         telephoneText.frame = CGRectMake(20, 80, 200, 45)
         telephoneText.placeholder = "请输入联系的手机"
         telephoneText.keyboardType = UIKeyboardType.NumberPad
@@ -73,7 +73,7 @@ class CodeTestViewController: UIViewController, UITextFieldDelegate{
     }
     
     func  showProtocol(){
-    
+        
         println(__FUNCTION__,__LINE__)
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
         let documentsDirectory = paths[0] as String
@@ -96,28 +96,28 @@ class CodeTestViewController: UIViewController, UITextFieldDelegate{
             // use this to delete file from documents directory
             //fileManager.removeItemAtPath(path, error: nil)
         }
-//        let resultArray = NSMutableArray(contentsOfFile: path)
-//        println("ProvincesAndCities.plist file is --> \(resultArray?.description)")
-//        
-//        var array = NSMutableArray(contentsOfFile:path)
-//        print(array)
-
+        //        let resultArray = NSMutableArray(contentsOfFile: path)
+        //        println("ProvincesAndCities.plist file is --> \(resultArray?.description)")
+        //
+        //        var array = NSMutableArray(contentsOfFile:path)
+        //        print(array)
+        
     }
     
     
     func  CodeTest(){
-    
+        
         Alamofire.request(.POST, "http://192.168.31.200:8002/api/Users/GetVerifyCode", parameters: ["Mobile":telephoneText.text])
             .responseString { (request, response, string, error) in
-               
+                
                 println(string)
         }
-    
+        
     }
     
     
     func  changeToOrderPage(){
-    
+        
         var m_OrderPageVC: OrderPageViewController!
         m_OrderPageVC = OrderPageViewController()
         m_OrderPageVC.navigationItem.title = "供厕服务中"

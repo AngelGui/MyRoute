@@ -14,6 +14,7 @@ class ProvinceTableViewController: UIViewController, UITableViewDataSource, UITa
     var tableView: UITableView?
     var registerViewController: RegisterViewController?
     var location: NSArray?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -107,8 +108,8 @@ class ProvinceTableViewController: UIViewController, UITableViewDataSource, UITa
         var m_City = CityTableViewController()
         m_City.registerViewController = self.registerViewController
         m_City.selectedProvince = province
-
-
+        m_City.location = self.location
+        
         self.navigationController?.pushViewController(m_City, animated: true)
     
     }

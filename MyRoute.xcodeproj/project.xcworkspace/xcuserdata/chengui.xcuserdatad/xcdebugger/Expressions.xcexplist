@@ -3,6 +3,25 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "map.CityTableViewController.tableView (map.CityTableViewController)(ObjectiveC.UITableView, numberOfRowsInSection : Swift.Int) -&gt; Swift.Int:CityTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cityArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "map.CityTableViewController.viewDidLoad (map.CityTableViewController)() -&gt; ():CityTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "location?.count">
+            </PersistentString>
+            <PersistentString
+               value = "location">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "map.NextCityTableViewController.tableView (map.NextCityTableViewController)(ObjectiveC.UITableView, didSelectRowAtIndexPath : ObjectiveC.NSIndexPath) -&gt; ():NextCityTableViewController.swift">
          <PersistentStrings>
             <PersistentString

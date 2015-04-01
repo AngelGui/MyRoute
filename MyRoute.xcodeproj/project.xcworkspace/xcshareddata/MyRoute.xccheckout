@@ -12,8 +12,6 @@
 	<dict>
 		<key>05BDCB9A29836DCA025D505281490BCA68E7C4E4</key>
 		<string>https://github.com/AngelGui/MyRoute.git</string>
-		<key>285ED93DD089BC42E842975B0587DADA800451B1</key>
-		<string>https://github.com/hadesh/MyRoute.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>MyRoute.xcodeproj</string>
@@ -21,8 +19,6 @@
 	<dict>
 		<key>05BDCB9A29836DCA025D505281490BCA68E7C4E4</key>
 		<string>../..</string>
-		<key>285ED93DD089BC42E842975B0587DADA800451B1</key>
-		<string>../../../MyRoute</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/AngelGui/MyRoute.git</string>
@@ -32,14 +28,6 @@
 	<string>05BDCB9A29836DCA025D505281490BCA68E7C4E4</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>285ED93DD089BC42E842975B0587DADA800451B1</string>
-			<key>IDESourceControlWCCName</key>
-			<string>MyRoute</string>
-		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>

@@ -453,7 +453,7 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
     }
     
     func changeToProvince(){
-    
+     
         var m_ProvinceTableVC = ProvinceTableViewController()
         m_ProvinceTableVC.title = "选择省份"
         m_ProvinceTableVC.registerViewController = self

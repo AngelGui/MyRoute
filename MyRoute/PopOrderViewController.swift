@@ -56,6 +56,6 @@ class PopOrderViewController: UIViewController{
     func tapGesture(tapGes: UITapGestureRecognizer) {
         println(__FUNCTION__, __LINE__)
         
-        self.dismissViewControllerAnimated(0, completion: nil)
+        self.dismissViewControllerAnimated(false, completion: nil)
     }
 }

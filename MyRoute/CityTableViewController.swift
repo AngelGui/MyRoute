@@ -76,7 +76,7 @@ class CityTableViewController: UIViewController, UITableViewDataSource, UITableV
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyTestCell")!
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "MyTestCell")
         var string  = self.cityArray?.objectAtIndex(indexPath.row) as NSString
         cell.textLabel?.text = string
         

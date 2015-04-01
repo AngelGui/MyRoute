@@ -366,8 +366,8 @@ class MainViewController: UIViewController, MAMapViewDelegate{
     func tapGesture(tapGes: UITapGestureRecognizer) {
         println(__FUNCTION__, __LINE__)
         
-       m_PopVoiceVC.dismissViewControllerAnimated(0, completion: nil)
-       m_PopOrderVC.dismissViewControllerAnimated(0, completion: nil)
+       m_PopVoiceVC.dismissViewControllerAnimated(false, completion: nil)
+       m_PopOrderVC.dismissViewControllerAnimated(false, completion: nil)
 
     }
     

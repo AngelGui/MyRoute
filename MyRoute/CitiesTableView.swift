@@ -13,7 +13,7 @@ class CitiesTableView: UITableView, UITableViewDataSource, UITableViewDelegate{
     var m_cityArray: NSArray! = ["北京","上海","天津"]
     var m_msgCellReuseIndentify: String! = "MsgCell"
     
-    override init?(frame: CGRect, style: UITableViewStyle) {
+    override init(frame: CGRect, style: UITableViewStyle) {
         super.init(frame: frame, style: style)
         
         //.注册单元格为可重用

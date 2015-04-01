@@ -64,12 +64,10 @@
 		3EF92CC81ACBA5B80031AC86 /* successed.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EF92CC71ACBA5B80031AC86 /* successed.png */; };
 		3EF92CCC1ACBA6730031AC86 /* provision.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EF92CCB1ACBA6730031AC86 /* provision.png */; };
 		3EF92D4E1ACBDF100031AC86 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF92D4B1ACBDF040031AC86 /* Alamofire.framework */; };
-		3EF92D4F1ACBDF380031AC86 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF92D4B1ACBDF040031AC86 /* Alamofire.framework */; };
 		3EF92D501ACBDF380031AC86 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF92D4B1ACBDF040031AC86 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8101BE29197CBBFC0042E4EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8101BE28197CBBFC0042E4EA /* AppDelegate.swift */; };
 		8101BE2E197CBBFC0042E4EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8101BE2C197CBBFC0042E4EA /* Main.storyboard */; };
 		8101BE30197CBBFC0042E4EA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8101BE2F197CBBFC0042E4EA /* Images.xcassets */; };
-		8101BE3C197CBBFC0042E4EA /* MyRouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8101BE3B197CBBFC0042E4EA /* MyRouteTests.swift */; };
 		8101BE47197CBC470042E4EA /* AMapSearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8101BE45197CBC470042E4EA /* AMapSearchKit.framework */; };
 		8101BE48197CBC470042E4EA /* MAMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8101BE46197CBC470042E4EA /* MAMapKit.framework */; };
 		8101BE4A197CBC4E0042E4EA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8101BE49197CBC4E0042E4EA /* Security.framework */; };
@@ -107,13 +105,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
 			remoteInfo = Alamofire;
-		};
-		8101BE36197CBBFC0042E4EA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8101BE1B197CBBFC0042E4EA /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8101BE22197CBBFC0042E4EA;
-			remoteInfo = MyRoute;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -195,9 +186,6 @@
 		8101BE28197CBBFC0042E4EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8101BE2D197CBBFC0042E4EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8101BE2F197CBBFC0042E4EA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		8101BE35197CBBFC0042E4EA /* MyRouteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyRouteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8101BE3A197CBBFC0042E4EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8101BE3B197CBBFC0042E4EA /* MyRouteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRouteTests.swift; sourceTree = "<group>"; };
 		8101BE45197CBC470042E4EA /* AMapSearchKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AMapSearchKit.framework; path = MyRoute/Extern/AMapSearchKit.framework; sourceTree = "<group>"; };
 		8101BE46197CBC470042E4EA /* MAMapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MAMapKit.framework; path = MyRoute/Extern/MAMapKit.framework; sourceTree = "<group>"; };
 		8101BE49197CBC4E0042E4EA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -222,20 +210,12 @@
 				3EF92D4E1ACBDF100031AC86 /* Alamofire.framework in Frameworks */,
 				8101BE54197CBC740042E4EA /* Foundation.framework in Frameworks */,
 				8101BE52197CBC670042E4EA /* libstdc++.6.0.9.dylib in Frameworks */,
-				3EF92D4F1ACBDF380031AC86 /* Alamofire.framework in Frameworks */,
 				8101BE50197CBC620042E4EA /* libz.dylib in Frameworks */,
 				8101BE4E197CBC5B0042E4EA /* CoreTelephony.framework in Frameworks */,
 				8101BE4C197CBC540042E4EA /* SystemConfiguration.framework in Frameworks */,
 				8101BE4A197CBC4E0042E4EA /* Security.framework in Frameworks */,
 				8101BE47197CBC470042E4EA /* AMapSearchKit.framework in Frameworks */,
 				8101BE48197CBC470042E4EA /* MAMapKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8101BE32197CBBFC0042E4EA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +335,6 @@
 				8101BE45197CBC470042E4EA /* AMapSearchKit.framework */,
 				8101BE46197CBC470042E4EA /* MAMapKit.framework */,
 				8101BE25197CBBFC0042E4EA /* MyRoute */,
-				8101BE38197CBBFC0042E4EA /* MyRouteTests */,
 				8101BE24197CBBFC0042E4EA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -364,7 +343,6 @@
 			isa = PBXGroup;
 			children = (
 				8101BE23197CBBFC0042E4EA /* map.app */,
-				8101BE35197CBBFC0042E4EA /* MyRouteTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -400,23 +378,6 @@
 			isa = PBXGroup;
 			children = (
 				8101BE27197CBBFC0042E4EA /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		8101BE38197CBBFC0042E4EA /* MyRouteTests */ = {
-			isa = PBXGroup;
-			children = (
-				8101BE3B197CBBFC0042E4EA /* MyRouteTests.swift */,
-				8101BE39197CBBFC0042E4EA /* Supporting Files */,
-			);
-			path = MyRouteTests;
-			sourceTree = "<group>";
-		};
-		8101BE39197CBBFC0042E4EA /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				8101BE3A197CBBFC0042E4EA /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -479,31 +440,13 @@
 			productReference = 8101BE23197CBBFC0042E4EA /* map.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8101BE34197CBBFC0042E4EA /* MyRouteTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8101BE42197CBBFC0042E4EA /* Build configuration list for PBXNativeTarget "MyRouteTests" */;
-			buildPhases = (
-				8101BE31197CBBFC0042E4EA /* Sources */,
-				8101BE32197CBBFC0042E4EA /* Frameworks */,
-				8101BE33197CBBFC0042E4EA /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8101BE37197CBBFC0042E4EA /* PBXTargetDependency */,
-			);
-			name = MyRouteTests;
-			productName = MyRouteTests;
-			productReference = 8101BE35197CBBFC0042E4EA /* MyRouteTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		8101BE1B197CBBFC0042E4EA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = AutoNavi;
 				TargetAttributes = {
 					8101BE22197CBBFC0042E4EA = {
@@ -513,10 +456,6 @@
 								enabled = 1;
 							};
 						};
-					};
-					8101BE34197CBBFC0042E4EA = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = 8101BE22197CBBFC0042E4EA;
 					};
 				};
 			};
@@ -540,7 +479,6 @@
 			projectRoot = "";
 			targets = (
 				8101BE22197CBBFC0042E4EA /* MyRoute */,
-				8101BE34197CBBFC0042E4EA /* MyRouteTests */,
 			);
 		};
 /* End PBXProject section */
@@ -620,13 +558,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8101BE33197CBBFC0042E4EA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -652,14 +583,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8101BE31197CBBFC0042E4EA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8101BE3C197CBBFC0042E4EA /* MyRouteTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -667,11 +590,6 @@
 			isa = PBXTargetDependency;
 			name = Alamofire;
 			targetProxy = 3EF92D511ACBDF380031AC86 /* PBXContainerItemProxy */;
-		};
-		8101BE37197CBBFC0042E4EA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8101BE22197CBBFC0042E4EA /* MyRoute */;
-			targetProxy = 8101BE36197CBBFC0042E4EA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -724,7 +642,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos8.1;
+				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -760,7 +678,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				METAL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos8.1;
+				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -806,42 +724,6 @@
 			};
 			name = Release;
 		};
-		8101BE43197CBBFC0042E4EA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MyRoute.app/MyRoute";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MyRouteTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Debug;
-		};
-		8101BE44197CBBFC0042E4EA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/MyRoute.app/MyRoute";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = MyRouteTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -859,15 +741,6 @@
 			buildConfigurations = (
 				8101BE40197CBBFC0042E4EA /* Debug */,
 				8101BE41197CBBFC0042E4EA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8101BE42197CBBFC0042E4EA /* Build configuration list for PBXNativeTarget "MyRouteTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8101BE43197CBBFC0042E4EA /* Debug */,
-				8101BE44197CBBFC0042E4EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

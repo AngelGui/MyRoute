@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "map.MainViewController.changeIdentity2 (map.MainViewController)(ObjectiveC.UISwipeGestureRecognizer) -&gt; ():MainViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "gesture.direction">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "map.NextCityTableViewController.tableView (map.NextCityTableViewController)(ObjectiveC.UITableView, didSelectRowAtIndexPath : ObjectiveC.NSIndexPath) -&gt; ():NextCityTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "indexPath.length">
+            </PersistentString>
+            <PersistentString
+               value = "selectionCity">
+            </PersistentString>
+            <PersistentString
+               value = "preViewController!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "map.CitiesTableViewController.tableView (map.CitiesTableViewController)(ObjectiveC.UITableView, didSelectRowAtIndexPath : ObjectiveC.NSIndexPath) -&gt; ():CitiesTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.dataArray">
+            </PersistentString>
+            <PersistentString
+               value = "province">
+            </PersistentString>
+            <PersistentString
+               value = "indexPath.length">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

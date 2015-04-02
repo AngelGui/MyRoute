@@ -74,33 +74,10 @@ class CodeTestViewController: UIViewController, UITextFieldDelegate{
     
     func  showProtocol(){
         
-        println(__FUNCTION__,__LINE__)
-        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true) as NSArray
-        let documentsDirectory = paths[0] as String
-        let path = documentsDirectory.stringByAppendingPathComponent("duangduang拉屎服务协议.doc")
-        let fileManager = NSFileManager.defaultManager()
-        
-        // ---判断沙盒中是否存在该文件----
-        if(!fileManager.fileExistsAtPath(path)) {
-            // If it doesn't, copy it from the default file in the Bundle
-            if let bundlePath = NSBundle.mainBundle().pathForResource("duangduang拉屎服务协议", ofType: "doc") {
-                let resultDictionary = NSMutableDictionary(contentsOfFile: bundlePath)
-                println("Bundle duangduang拉屎服务协议.doc file is --> \(resultDictionary?.description)")
-                fileManager.copyItemAtPath(bundlePath, toPath: path, error: nil)
-                println("copy")
-            } else {
-                println("duangduang拉屎服务协议.doc not found. Please, make sure it is part of the bundle.")
-            }
-        } else {
-            println("duangduang拉屎服务协议.doc already exits at path.")
-            // use this to delete file from documents directory
-            //fileManager.removeItemAtPath(path, error: nil)
-        }
-        //        let resultArray = NSMutableArray(contentsOfFile: path)
-        //        println("ProvincesAndCities.plist file is --> \(resultArray?.description)")
-        //
-        //        var array = NSMutableArray(contentsOfFile:path)
-        //        print(array)
+        var m_ServiceProtocolVC: ServiceProtocolViewController!
+        m_ServiceProtocolVC = ServiceProtocolViewController()
+        m_ServiceProtocolVC.navigationItem.title = "服务协议"
+        self.navigationController?.pushViewController(m_ServiceProtocolVC, animated: false)
         
     }
     

@@ -4,12 +4,12 @@
 <array>
 	<dict>
 		<key>State</key>
-		<string>直辖市</string>
+		<string>北京市</string>
 		<key>Cities</key>
 		<array>
 			<dict>
 				<key>city</key>
-				<string>北京</string>
+				<string>东城区</string>
 				<key>lat</key>
 				<real>39.92</real>
 				<key>lon</key>
@@ -17,7 +17,7 @@
 			</dict>
 			<dict>
 				<key>city</key>
-				<string>上海</string>
+				<string>西城区</string>
 				<key>lat</key>
 				<real>31.22</real>
 				<key>lon</key>
@@ -25,7 +25,7 @@
 			</dict>
 			<dict>
 				<key>city</key>
-				<string>天津</string>
+				<string>崇文区</string>
 				<key>lat</key>
 				<real>39.13</real>
 				<key>lon</key>
@@ -33,34 +33,390 @@
 			</dict>
 			<dict>
 				<key>city</key>
-				<string>重庆</string>
+				<string>宣武区</string>
 				<key>lat</key>
 				<real>29.59</real>
 				<key>lon</key>
 				<real>106.54</real>
 			</dict>
+			<dict>
+				<key>city</key>
+				<string>朝阳区</string>
+				<key>lat</key>
+				<integer>0</integer>
+				<key>lon</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>丰台区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>石景山区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>海淀区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>门头沟区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>房山区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>通州区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>顺义区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>昌平区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>大兴区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>怀柔区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>平谷区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>密云县</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>延庆县</string>
+			</dict>
 		</array>
 	</dict>
 	<dict>
 		<key>State</key>
-		<string>特别行政区</string>
+		<string>上海市</string>
+		<key>Cities</key>
+		<array>
+			<dict>
+				<key>city</key>
+				<string>黄浦区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>卢湾区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>徐汇区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>长宁区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>静安区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>普陀区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>闸北区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>虹口区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>杨浦区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>闵行区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>宝山区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>嘉定区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>浦东新区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>金山区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>松江区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>青浦区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>南汇区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>奉贤区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>崇明区</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>State</key>
+		<string>天津市</string>
+		<key>Cities</key>
+		<array>
+			<dict>
+				<key>city</key>
+				<string>和平区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>河东区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>河西区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>南开区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>河北区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>红桥区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>塘沽区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>汉沽区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>大港区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>东丽区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>西青区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>津南区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>北辰区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>武清区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>宝坻区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>宁河县</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>静海县</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>蓟县</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>State</key>
+		<string>重庆市</string>
+		<key>Cities</key>
+		<array>
+			<dict>
+				<key>city</key>
+				<string>万州区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>涪陵区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>渝中区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>大渡口区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>江北区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>沙坪坝区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>九龙坡区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>南岸区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>北碚区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>万盛区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>双桥区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>渝北区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>巴南区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>黔江区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>长寿区</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>潼南县</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>铜梁县</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>大足县</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>荣昌县</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>璧山县</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>梁平县</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>城口县</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>丰都县</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>綦江县</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>垫江县</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>武隆县</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>忠县</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>云阳县</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>奉节县</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>巫山县</string>
+			</dict>
+			<dict>
+				<key>city</key>
+				<string>巫溪县</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>State</key>
+		<string>香港特别行政区</string>
 		<key>Cities</key>
 		<array>
 			<dict>
 				<key>city</key>
 				<string>香港</string>
-				<key>lat</key>
-				<real>22.2</real>
-				<key>lon</key>
-				<real>114.1</real>
 			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>State</key>
+		<string>澳门特别行政区</string>
+		<key>Cities</key>
+		<array>
 			<dict>
 				<key>city</key>
 				<string>澳门</string>
 				<key>lat</key>
-				<real>22.13</real>
+				<real>22.2</real>
 				<key>lon</key>
-				<real>113.33</real>
+				<real>114.1</real>
 			</dict>
 		</array>
 	</dict>

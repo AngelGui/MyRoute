@@ -3,14 +3,6 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "map.CityTableViewController.tableView (map.CityTableViewController)(ObjectiveC.UITableView, numberOfRowsInSection : Swift.Int) -&gt; Swift.Int:CityTableViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "cityArray">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "map.CityTableViewController.viewDidLoad (map.CityTableViewController)() -&gt; ():CityTableViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -22,16 +14,16 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "map.NextCityTableViewController.tableView (map.NextCityTableViewController)(ObjectiveC.UITableView, didSelectRowAtIndexPath : ObjectiveC.NSIndexPath) -&gt; ():NextCityTableViewController.swift">
+         contextName = "map.CitiesTableViewController.tableView (map.CitiesTableViewController)(ObjectiveC.UITableView, didSelectRowAtIndexPath : ObjectiveC.NSIndexPath) -&gt; ():CitiesTableViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "selectionCity">
-            </PersistentString>
-            <PersistentString
-               value = "preViewController!">
+               value = "province">
             </PersistentString>
             <PersistentString
                value = "indexPath.length">
+            </PersistentString>
+            <PersistentString
+               value = "self.dataArray">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -52,16 +44,35 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "map.CitiesTableViewController.tableView (map.CitiesTableViewController)(ObjectiveC.UITableView, didSelectRowAtIndexPath : ObjectiveC.NSIndexPath) -&gt; ():CitiesTableViewController.swift">
+         contextName = "map.NextCityTableViewController.tableView (map.NextCityTableViewController)(ObjectiveC.UITableView, didSelectRowAtIndexPath : ObjectiveC.NSIndexPath) -&gt; ():NextCityTableViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "province">
+               value = "selectionCity">
+            </PersistentString>
+            <PersistentString
+               value = "preViewController!">
             </PersistentString>
             <PersistentString
                value = "indexPath.length">
             </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "map.RegisterViewController.readProvinceCityInfo (map.RegisterViewController)() -&gt; ():RegisterViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "map.RegisterViewController.registerBtnPress (map.RegisterViewController)(ObjectiveC.UIButton) -&gt; ():RegisterViewController.swift">
+         <PersistentStrings>
             <PersistentString
-               value = "self.dataArray">
+               value = "m_isRegisterSuccess">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "map.CityTableViewController.tableView (map.CityTableViewController)(ObjectiveC.UITableView, numberOfRowsInSection : Swift.Int) -&gt; Swift.Int:CityTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "cityArray">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

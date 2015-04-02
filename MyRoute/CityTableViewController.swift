@@ -87,7 +87,8 @@ class CityTableViewController: UIViewController, UITableViewDataSource, UITableV
         
         
         let selectedCity:String = self.cityArray![indexPath.row] as String
-        self.registerViewController?.cityText.text = selectedProvince! + selectedCity
+        let selected = selectedProvince! + " "
+        self.registerViewController?.cityText.text = selected + selectedCity
         self.navigationController?.popToViewController(registerViewController!, animated: true)
         
         

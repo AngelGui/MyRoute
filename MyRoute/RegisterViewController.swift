@@ -13,8 +13,6 @@ import Alamofire
 class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
     var location: NSArray?
-//    var selectedProvince:String?
-//    var selectedCity:String?
     
     var didLabel = UILabel()
     var arrow = UIButton()
@@ -33,11 +31,15 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
     var toiletPhotoImageBtn: UIButton! = UIButton()
     var submitBt = UIButton()
     
-    var tissueImage = UIImage(named: "tissue1.png")
+    var tissueImage = UIImage(named: "tissue2.png")
     var wifiImage = UIImage(named: "wifi2.png")
     var washerImage = UIImage(named: "washer1.png")
 
     
+    var m_toiletPhotoUrl: String!                               //厕主厕所图像
+    var m_address: String!                                      //厕所地址
+    var m_provision: NSMutableArray! = NSMutableArray()         //厕所配置
+    var m_toiletType: String!                                   //厕所类型
 
     
     override func viewDidLoad() {
@@ -72,13 +74,13 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
             }
         } else {
             println("ProvincesAndCities.plist already exits at path.")
-            // use this to delete file from documents directory
-            //fileManager.removeItemAtPath(path, error: nil)
+
         }
         let resultArray = NSMutableArray(contentsOfFile: path)
-        println("ProvincesAndCities.plist file is --> \(resultArray?.description)")
+        //println("ProvincesAndCities.plist file is --> \(resultArray?.description)")
 
         location = resultArray
+        //print(path)
     }
     
     func  initRegiterVC(){
@@ -108,7 +110,7 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
         toiletTypeLabel.font = UIFont.systemFontOfSize(17)
         self.view.addSubview(toiletTypeLabel)
         
-        var sitToiletImage = UIImage(named: "sitToilet1.png")
+        var sitToiletImage = UIImage(named: "sitToilet2.png")
         sitToilet.frame = CGRect(x: 30, y: 170, width: 120, height: 40)
         sitToilet.setImage(sitToiletImage, forState: UIControlState.Normal)
         sitToilet.addTarget(self, action: "changeToiletType:", forControlEvents: UIControlEvents.TouchUpInside)
@@ -195,7 +197,7 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
         var submitImage = UIImage(named: "submit.png")
         submitBt.frame = CGRect(x: 30, y: 510, width: 260, height: 40)
         submitBt.setImage(submitImage, forState: UIControlState.Normal)
-        submitBt.addTarget(self, action: "changeToCodeTest", forControlEvents: UIControlEvents.TouchUpInside)
+        submitBt.addTarget(self, action: "registerBtnPress:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(submitBt)
 
     }
@@ -206,9 +208,11 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
         case sitToilet:
             sitToilet.setImage(UIImage(named: "sitToilet1.png"), forState: UIControlState.Normal)
             crouchToilet.setImage(UIImage(named: "crouchToliet1.png"), forState: UIControlState.Normal)
+            m_toiletType = "豪华坐便器"
         case crouchToilet:
             sitToilet.setImage(UIImage(named: "sitToilet2.png"), forState: UIControlState.Normal)
             crouchToilet.setImage(UIImage(named: "crouchToliet2.png"), forState: UIControlState.Normal)
+            m_toiletType = "经济蹲坑"
         default:
             sender.setImage(UIImage(named: "sitToilet1.png"), forState: UIControlState.Normal)
             
@@ -220,9 +224,12 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
         switch sender{
         case tissue:
             if tissue.imageView?.image == tissueImage
-            {tissue.setImage(UIImage(named: "tissue2.png"), forState: UIControlState.Normal)}
+            {tissue.setImage(UIImage(named: "tissue1.png"), forState: UIControlState.Normal)
+             //m_provision[0]="手纸"
+              m_provision.addObject("手纸")
+            }
             else
-            {tissue.setImage(UIImage(named: "tissue1.png"), forState: UIControlState.Normal)}
+            {tissue.setImage(UIImage(named: "tissue2.png"), forState: UIControlState.Normal)}
         case wifi:
             if wifi.imageView?.image == wifiImage
             {  wifi.setImage(UIImage(named: "wifi1.png"), forState: UIControlState.Normal)
@@ -232,6 +239,7 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
                 alert.addButtonWithTitle("知道了")
                 alert.message = "请记得在厕所贴上wifi名和密码哦"
                 alert.show()
+                m_provision.addObject("wifi")
             }
             else
             {   wifi.setImage(UIImage(named: "wifi2.png"), forState: UIControlState.Normal)
@@ -239,11 +247,13 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
             }
         case washer:
             if washer.imageView?.image == washerImage
-            {washer.setImage(UIImage(named: "washer2.png"), forState: UIControlState.Normal)}
+            {washer.setImage(UIImage(named: "washer2.png"), forState: UIControlState.Normal)
+                m_provision.addObject("洗手台")
+            }
             else
             {washer.setImage(UIImage(named: "washer1.png"), forState: UIControlState.Normal)}
         default:
-            tissue.setImage(UIImage(named: "tissue1.png"), forState: UIControlState.Normal)
+            tissue.setImage(UIImage(named: "tissue2.png"), forState: UIControlState.Normal)
         }
     
     }
@@ -280,7 +290,7 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
         }
         //return true
     }
-    
+ 
     //-------------------------------------------------
     //文本框已经结束编辑状态时的委托方法
     //-------------------------------------------------
@@ -288,7 +298,7 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
     func textFieldDidEndEditing(textField: UITextField) {
         
         NSLog("%@: %d", __FUNCTION__, __LINE__)
-        
+
         UIView.animateWithDuration(0.2,
             delay: 0.0,
             options: .CurveEaseOut,
@@ -304,6 +314,15 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
                 println("view down !")
             }
         )
+        if addressText.text.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 240
+        {
+            var alert = UIAlertView(title: "温馨提示: ",
+                message: "地址输入长度最高控制在40字！",
+                delegate: self,
+                cancelButtonTitle: "确定")
+            alert.show()
+            addressText.text.removeAll(keepCapacity: true)
+        }
         //return true
     }
     
@@ -461,14 +480,84 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
     
     }
    
-    //MARK:---切换到手机验证码页面---
-    func changeToCodeTest(){
+    // MARK: - 注册按钮
+    
+    //-------------------------------------------------
+    //注册功能：注册按钮对应的方法
+    //-------------------------------------------------
+    var m_isRegisterSuccess: Bool =  true
+    
+    func registerBtnPress(sender: UIButton){
         
-        var m_CodeTestVC = CodeTestViewController()
-        m_CodeTestVC.title = "手机验证"
-        self.navigationController?.pushViewController(m_CodeTestVC, animated: true)
+        println(__FUNCTION__, __LINE__)
         
+        //判断用户是否输入各个字段
+        if isInputNotEmpty() {
+
+            //联网
+            
+            //获取头像文件路径，从用户信息单例类对象中
+     //       var user: LoginUser! = LoginUser.shareInstance()
+//            println("user.m_photoUrl = \(user.m_photoUrl)")
+//            
+//            if nil == user.m_photoUrl || user.m_photoUrl.isEmpty {
+//                
+//                //注册方法1: 不上传用户头像的版本
+//                registerRequestURL()
+//            } else {
+//                
+//                //注册方法2: 上传用户头像的版本
+//                registerRequestURLV2()
+//            }
+//            
+            //若注册成功，则切换到手机验证界面
+            if m_isRegisterSuccess {
+                
+                var m_CodeTestVC = CodeTestViewController()
+                m_CodeTestVC.title = "手机验证"
+                self.navigationController?.pushViewController(m_CodeTestVC, animated: true)
+            }
+        }
+        else {
+            
+            //用户输入的数据有空值
+        }
     }
+    //-------------------------------------------------
+    //判断用户是否输入各个字段
+    //-------------------------------------------------
+    
+    func isInputNotEmpty() -> Bool {
+        
+        if  cityText.text.isEmpty || addressText.text.isEmpty
+        {
+            //某些字段未空, 用户未输入
+            var alert = UIAlertView(title: "错误提示: ",
+                message: "厕所地址，\n不允许为空！",
+                delegate: self,
+                cancelButtonTitle: "确定")
+            alert.show()
+            
+            return false
+        }
+        else {
+            //保存用户输入的数据到用户信息单例中
+            var lord: LordInfomation! = LordInfomation.shareInstance()
+            
+            lord.m_id = "0"
+            lord.m_toiletType = m_toiletType
+            lord.m_provision = m_provision
+            lord.m_address = cityText.text + addressText.text
+            
+            //---begin-added-by-MaoYingyong-2014-12-6---
+            //lord.m_photoUrl = ""
+            //---end---added-by-MaoYingyong-2014-12-6---
+            
+            return true
+        }
+    }
+    
+    
 }
 
 

@@ -30,45 +30,6 @@ class ProvinceTableViewController: UIViewController, UITableViewDataSource, UITa
            // let skey :String = key
             self.dataArray!.addObject(key!)
         }
-//        self.dataArray = NSMutableArray()
-//        self.dataArray!.addObject("北京市")
-//        self.dataArray!.addObject("江苏省")
-//        self.dataArray!.addObject("浙江省")
-//        self.dataArray!.addObject("安徽省")
-//        self.dataArray!.addObject("福建省")
-//        self.dataArray!.addObject("江西省")
-//        self.dataArray!.addObject("山东省")
-//        self.dataArray!.addObject("湖北省")
-//        self.dataArray!.addObject("湖南省")
-//        self.dataArray!.addObject("河南省")
-//        self.dataArray!.addObject("广东省")
-//        self.dataArray!.addObject("天津市")
-//        self.dataArray!.addObject("广西壮族自治区")
-//        self.dataArray!.addObject("海南省")
-//        self.dataArray!.addObject("重庆市")
-//        self.dataArray!.addObject("四川省")
-//        self.dataArray!.addObject("贵州省")
-//        self.dataArray!.addObject("云南省")
-//        self.dataArray!.addObject("西藏自治区")
-//        self.dataArray!.addObject("陕西省")
-//        self.dataArray!.addObject("甘肃省")
-//        self.dataArray!.addObject("青海省")
-//        self.dataArray!.addObject("河北省")
-//        self.dataArray!.addObject("宁夏回族自治区")
-//        self.dataArray!.addObject("新疆维吾尔自治区")
-//        self.dataArray!.addObject("香港特别行政区")
-//        self.dataArray!.addObject("澳门特别行政区")
-//        self.dataArray!.addObject("台湾省")
-//        self.dataArray!.addObject("山西省")
-//        self.dataArray!.addObject("内蒙古自治区")
-//        self.dataArray!.addObject("辽宁省")
-//        self.dataArray!.addObject("吉林省")
-//        self.dataArray!.addObject("黑龙江省")
-//        self.dataArray!.addObject("上海市")
-        
-        
-//        NSLog("%@", self.dataArray!)
-        
         self.tableView = UITableView(frame: self.view.frame, style:UITableViewStyle.Plain)
         self.tableView!.delegate = self
         self.tableView!.dataSource = self
@@ -104,7 +65,7 @@ class ProvinceTableViewController: UIViewController, UITableViewDataSource, UITa
         
  
         var province = self.dataArray![indexPath.row] as? String
-        print(self.dataArray)
+        //print(self.dataArray)
         var m_City = CityTableViewController()
         m_City.registerViewController = self.registerViewController
         m_City.selectedProvince = province

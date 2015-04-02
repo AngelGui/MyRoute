@@ -45,13 +45,14 @@
 		3EA26F6C1AC94F7000DC7777 /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EA26F6B1AC94F7000DC7777 /* arrow.png */; };
 		3EA26F721AC95A8800DC7777 /* toiletPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EA26F711AC95A8800DC7777 /* toiletPhoto.png */; };
 		3EA26F781AC9616100DC7777 /* CodeTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA26F771AC9616100DC7777 /* CodeTestViewController.swift */; };
+		3EE7983C1ACCEAD80002D275 /* ProvincesAndCities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EE7983B1ACCEAD80002D275 /* ProvincesAndCities.plist */; };
+		3EE798441ACCF09E0002D275 /* ServiceProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE798431ACCF09E0002D275 /* ServiceProtocolViewController.swift */; };
+		3EE7984A1ACD31530002D275 /* LordInfomation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE798491ACD31530002D275 /* LordInfomation.swift */; };
 		3EF92C981ACA4B150031AC86 /* orderWin.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EF92C971ACA4B150031AC86 /* orderWin.png */; };
 		3EF92C9A1ACA524D0031AC86 /* PopOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF92C991ACA524D0031AC86 /* PopOrderViewController.swift */; };
 		3EF92C9E1ACA65B70031AC86 /* ProvinceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF92C9D1ACA65B70031AC86 /* ProvinceTableViewController.swift */; };
-		3EF92CA61ACA7B7D0031AC86 /* CitiesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF92CA51ACA7B7D0031AC86 /* CitiesTableView.swift */; };
 		3EF92CAB1ACA9ED90031AC86 /* CityTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF92CAA1ACA9ED90031AC86 /* CityTableViewController.swift */; };
 		3EF92CAD1ACAB4290031AC86 /* OrderPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF92CAC1ACAB4290031AC86 /* OrderPageViewController.swift */; };
-		3EF92CAF1ACAE85D0031AC86 /* ProvincesAndCities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EF92CAE1ACAE85D0031AC86 /* ProvincesAndCities.plist */; };
 		3EF92CB31ACBA0100031AC86 /* ResponsedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF92CB21ACBA0100031AC86 /* ResponsedViewController.swift */; };
 		3EF92CB61ACBA3050031AC86 /* WaitingForUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF92CB51ACBA3050031AC86 /* WaitingForUserViewController.swift */; };
 		3EF92CBC1ACBA4C10031AC86 /* telephone.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EF92CB71ACBA4C10031AC86 /* telephone.png */; };
@@ -170,13 +171,14 @@
 		3EA26F6B1AC94F7000DC7777 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		3EA26F711AC95A8800DC7777 /* toiletPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = toiletPhoto.png; sourceTree = "<group>"; };
 		3EA26F771AC9616100DC7777 /* CodeTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeTestViewController.swift; sourceTree = "<group>"; };
+		3EE7983B1ACCEAD80002D275 /* ProvincesAndCities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ProvincesAndCities.plist; sourceTree = "<group>"; };
+		3EE798431ACCF09E0002D275 /* ServiceProtocolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProtocolViewController.swift; sourceTree = "<group>"; };
+		3EE798491ACD31530002D275 /* LordInfomation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LordInfomation.swift; sourceTree = "<group>"; };
 		3EF92C971ACA4B150031AC86 /* orderWin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orderWin.png; sourceTree = "<group>"; };
 		3EF92C991ACA524D0031AC86 /* PopOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopOrderViewController.swift; sourceTree = "<group>"; };
 		3EF92C9D1ACA65B70031AC86 /* ProvinceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvinceTableViewController.swift; sourceTree = "<group>"; };
-		3EF92CA51ACA7B7D0031AC86 /* CitiesTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitiesTableView.swift; sourceTree = "<group>"; };
 		3EF92CAA1ACA9ED90031AC86 /* CityTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityTableViewController.swift; sourceTree = "<group>"; };
 		3EF92CAC1ACAB4290031AC86 /* OrderPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderPageViewController.swift; sourceTree = "<group>"; };
-		3EF92CAE1ACAE85D0031AC86 /* ProvincesAndCities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ProvincesAndCities.plist; sourceTree = "<group>"; };
 		3EF92CB21ACBA0100031AC86 /* ResponsedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponsedViewController.swift; sourceTree = "<group>"; };
 		3EF92CB51ACBA3050031AC86 /* WaitingForUserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitingForUserViewController.swift; sourceTree = "<group>"; };
 		3EF92CB71ACBA4C10031AC86 /* telephone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = telephone.png; sourceTree = "<group>"; };
@@ -189,7 +191,6 @@
 		3EF92CC71ACBA5B80031AC86 /* successed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = successed.png; sourceTree = "<group>"; };
 		3EF92CCB1ACBA6730031AC86 /* provision.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = provision.png; sourceTree = "<group>"; };
 		3EF92D451ACBDF040031AC86 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
-		3EF92D531ACBF1EB0031AC86 /* duangduang拉屎服务协议.doc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "duangduang拉屎服务协议.doc"; sourceTree = "<group>"; };
 		8101BE23197CBBFC0042E4EA /* map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = map.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8101BE27197CBBFC0042E4EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8101BE28197CBBFC0042E4EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -377,12 +378,12 @@
 				3EA26F4E1AC9109C00DC7777 /* PopVoiceViewController.swift */,
 				3EF92C991ACA524D0031AC86 /* PopOrderViewController.swift */,
 				3E3708431AC3CA0C00E28C6B /* CountDownViewController.swift */,
-				3E37088F1AC537FC00E28C6B /* ProgressView.swift */,
 				3E3708931AC5461700E28C6B /* UIImage+Gif.swift */,
 				3EA26F4A1AC3F8E100DC7777 /* RegisterViewController.swift */,
 				3EF92C9D1ACA65B70031AC86 /* ProvinceTableViewController.swift */,
 				3EF92CAA1ACA9ED90031AC86 /* CityTableViewController.swift */,
 				3EA26F771AC9616100DC7777 /* CodeTestViewController.swift */,
+				3EE798431ACCF09E0002D275 /* ServiceProtocolViewController.swift */,
 				3EF92CAC1ACAB4290031AC86 /* OrderPageViewController.swift */,
 				3EF92CB21ACBA0100031AC86 /* ResponsedViewController.swift */,
 				3EF92CB51ACBA3050031AC86 /* WaitingForUserViewController.swift */,
@@ -424,7 +425,7 @@
 		8101BE5F197CF1040042E4EA /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				3EF92CA51ACA7B7D0031AC86 /* CitiesTableView.swift */,
+				3E37088F1AC537FC00E28C6B /* ProgressView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -439,8 +440,7 @@
 				3EF92CB41ACBA0750031AC86 /* ResponsedResources */,
 				3EA26F541AC9475F00DC7777 /* RegisterResources */,
 				3E5215561AC25D0E002BB641 /* FirstPageResources */,
-				3EF92CAE1ACAE85D0031AC86 /* ProvincesAndCities.plist */,
-				3EF92D531ACBF1EB0031AC86 /* duangduang拉屎服务协议.doc */,
+				3EE7983B1ACCEAD80002D275 /* ProvincesAndCities.plist */,
 				815FB8681980F564001E52C0 /* aeroplane@2x.png */,
 				3E3708911AC540F800E28C6B /* radar.gif */,
 				8101BE62197CF36B0042E4EA /* location_yes@2x.png */,
@@ -453,6 +453,7 @@
 		8101BE6F197D1E900042E4EA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3EE798491ACD31530002D275 /* LordInfomation.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -570,6 +571,7 @@
 				3EA26F691AC9486000DC7777 /* wifi1.png in Resources */,
 				81D4497F1A4D15960054B554 /* AMap.bundle in Resources */,
 				3EA26F621AC9486000DC7777 /* sitToilet1.png in Resources */,
+				3EE7983C1ACCEAD80002D275 /* ProvincesAndCities.plist in Resources */,
 				3E3708921AC540F800E28C6B /* radar.gif in Resources */,
 				3E52156D1AC25D2B002BB641 /* 1yuan2.png in Resources */,
 				3EF92CBC1ACBA4C10031AC86 /* telephone.png in Resources */,
@@ -599,7 +601,6 @@
 				3E5215701AC25D2B002BB641 /* board.png in Resources */,
 				3EF92CC81ACBA5B80031AC86 /* successed.png in Resources */,
 				3E52156B1AC25D2B002BB641 /* 0yuan2.png in Resources */,
-				3EF92CAF1ACAE85D0031AC86 /* ProvincesAndCities.plist in Resources */,
 				3EF92CC51ACBA4F70031AC86 /* order.png in Resources */,
 				3EF92CC01ACBA4C10031AC86 /* 以应答6.png in Resources */,
 				3E5215711AC25D2B002BB641 /* giveWCBt.png in Resources */,
@@ -634,17 +635,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EE798441ACCF09E0002D275 /* ServiceProtocolViewController.swift in Sources */,
 				3EF92CAD1ACAB4290031AC86 /* OrderPageViewController.swift in Sources */,
 				3E3708941AC5461700E28C6B /* UIImage+Gif.swift in Sources */,
 				3EF92CB31ACBA0100031AC86 /* ResponsedViewController.swift in Sources */,
 				3EF92CB61ACBA3050031AC86 /* WaitingForUserViewController.swift in Sources */,
+				3EE7984A1ACD31530002D275 /* LordInfomation.swift in Sources */,
 				3EA26F781AC9616100DC7777 /* CodeTestViewController.swift in Sources */,
 				3EF92C9A1ACA524D0031AC86 /* PopOrderViewController.swift in Sources */,
 				3E3708441AC3CA0C00E28C6B /* CountDownViewController.swift in Sources */,
 				3EA26F4F1AC9109C00DC7777 /* PopVoiceViewController.swift in Sources */,
 				3EF92CAB1ACA9ED90031AC86 /* CityTableViewController.swift in Sources */,
 				8101BE58197CEFD00042E4EA /* MainViewController.swift in Sources */,
-				3EF92CA61ACA7B7D0031AC86 /* CitiesTableView.swift in Sources */,
 				3EF92C9E1ACA65B70031AC86 /* ProvinceTableViewController.swift in Sources */,
 				3E3708901AC537FC00E28C6B /* ProgressView.swift in Sources */,
 				8101BE29197CBBFC0042E4EA /* AppDelegate.swift in Sources */,

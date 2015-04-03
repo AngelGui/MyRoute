@@ -44,6 +44,9 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "map.RegisterViewController.readProvinceCityInfo (map.RegisterViewController)() -&gt; ():RegisterViewController.swift">
+      </ContextState>
+      <ContextState
          contextName = "map.NextCityTableViewController.tableView (map.NextCityTableViewController)(ObjectiveC.UITableView, didSelectRowAtIndexPath : ObjectiveC.NSIndexPath) -&gt; ():NextCityTableViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -58,13 +61,32 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "map.RegisterViewController.readProvinceCityInfo (map.RegisterViewController)() -&gt; ():RegisterViewController.swift">
-      </ContextState>
-      <ContextState
          contextName = "map.RegisterViewController.registerBtnPress (map.RegisterViewController)(ObjectiveC.UIButton) -&gt; ():RegisterViewController.swift">
          <PersistentStrings>
             <PersistentString
                value = "m_isRegisterSuccess">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "map.CustomAnnotationView.setSelected (map.CustomAnnotationView)(Swift.Bool, animated : Swift.Bool) -&gt; ():CustomAnnotationView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.calloutView.title">
+            </PersistentString>
+            <PersistentString
+               value = "self.annotation.subtitle">
+            </PersistentString>
+            <PersistentString
+               value = "self.annotation.title">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "map.MainViewController.mapView (map.MainViewController)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.MAMapView&gt;, viewForAnnotation : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.MAAnnotation&gt;) -&gt; Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.MAAnnotationView&gt;:MainViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "annotation.isKindOfClass(MAAnnotation)">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

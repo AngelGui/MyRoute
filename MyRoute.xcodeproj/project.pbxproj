@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E0596DF1ACEE3FA002E7A29 /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E0596DE1ACEE3FA002E7A29 /* CustomAnnotationView.swift */; };
 		3E3708441AC3CA0C00E28C6B /* CountDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3708431AC3CA0C00E28C6B /* CountDownViewController.swift */; };
 		3E3708901AC537FC00E28C6B /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E37088F1AC537FC00E28C6B /* ProgressView.swift */; };
 		3E3708921AC540F800E28C6B /* radar.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3E3708911AC540F800E28C6B /* radar.gif */; };
@@ -48,6 +49,9 @@
 		3EE7983C1ACCEAD80002D275 /* ProvincesAndCities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EE7983B1ACCEAD80002D275 /* ProvincesAndCities.plist */; };
 		3EE798441ACCF09E0002D275 /* ServiceProtocolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE798431ACCF09E0002D275 /* ServiceProtocolViewController.swift */; };
 		3EE7984A1ACD31530002D275 /* LordInfomation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE798491ACD31530002D275 /* LordInfomation.swift */; };
+		3EE798501ACE97910002D275 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 8101BE4F197CBC620042E4EA /* libz.dylib */; };
+		3EE798521ACE97AD0002D275 /* common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE798511ACE97AD0002D275 /* common.swift */; };
+		3EE798541ACED1BC0002D275 /* CustomCalloutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EE798531ACED1BC0002D275 /* CustomCalloutView.swift */; };
 		3EF92C981ACA4B150031AC86 /* orderWin.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EF92C971ACA4B150031AC86 /* orderWin.png */; };
 		3EF92C9A1ACA524D0031AC86 /* PopOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF92C991ACA524D0031AC86 /* PopOrderViewController.swift */; };
 		3EF92C9E1ACA65B70031AC86 /* ProvinceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EF92C9D1ACA65B70031AC86 /* ProvinceTableViewController.swift */; };
@@ -133,6 +137,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3E0596DE1ACEE3FA002E7A29 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
 		3E3708431AC3CA0C00E28C6B /* CountDownViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountDownViewController.swift; sourceTree = "<group>"; };
 		3E37088F1AC537FC00E28C6B /* ProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
 		3E3708911AC540F800E28C6B /* radar.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = radar.gif; sourceTree = "<group>"; };
@@ -174,6 +179,8 @@
 		3EE7983B1ACCEAD80002D275 /* ProvincesAndCities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ProvincesAndCities.plist; sourceTree = "<group>"; };
 		3EE798431ACCF09E0002D275 /* ServiceProtocolViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceProtocolViewController.swift; sourceTree = "<group>"; };
 		3EE798491ACD31530002D275 /* LordInfomation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LordInfomation.swift; sourceTree = "<group>"; };
+		3EE798511ACE97AD0002D275 /* common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = common.swift; sourceTree = "<group>"; };
+		3EE798531ACED1BC0002D275 /* CustomCalloutView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCalloutView.swift; sourceTree = "<group>"; };
 		3EF92C971ACA4B150031AC86 /* orderWin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orderWin.png; sourceTree = "<group>"; };
 		3EF92C991ACA524D0031AC86 /* PopOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopOrderViewController.swift; sourceTree = "<group>"; };
 		3EF92C9D1ACA65B70031AC86 /* ProvinceTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProvinceTableViewController.swift; sourceTree = "<group>"; };
@@ -237,6 +244,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EE798501ACE97910002D275 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +295,15 @@
 				3EA26F5F1AC9486000DC7777 /* wifi2.png */,
 			);
 			name = RegisterResources;
+			sourceTree = "<group>";
+		};
+		3EE7984E1ACE97830002D275 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3E3708931AC5461700E28C6B /* UIImage+Gif.swift */,
+				3EE798511ACE97AD0002D275 /* common.swift */,
+			);
+			name = Utilities;
 			sourceTree = "<group>";
 		};
 		3EF92CB41ACBA0750031AC86 /* ResponsedResources */ = {
@@ -373,12 +390,12 @@
 		8101BE25197CBBFC0042E4EA /* MyRoute */ = {
 			isa = PBXGroup;
 			children = (
+				3EE7984E1ACE97830002D275 /* Utilities */,
 				8101BE28197CBBFC0042E4EA /* AppDelegate.swift */,
 				8101BE57197CEFD00042E4EA /* MainViewController.swift */,
 				3EA26F4E1AC9109C00DC7777 /* PopVoiceViewController.swift */,
 				3EF92C991ACA524D0031AC86 /* PopOrderViewController.swift */,
 				3E3708431AC3CA0C00E28C6B /* CountDownViewController.swift */,
-				3E3708931AC5461700E28C6B /* UIImage+Gif.swift */,
 				3EA26F4A1AC3F8E100DC7777 /* RegisterViewController.swift */,
 				3EF92C9D1ACA65B70031AC86 /* ProvinceTableViewController.swift */,
 				3EF92CAA1ACA9ED90031AC86 /* CityTableViewController.swift */,
@@ -426,6 +443,8 @@
 			isa = PBXGroup;
 			children = (
 				3E37088F1AC537FC00E28C6B /* ProgressView.swift */,
+				3EE798531ACED1BC0002D275 /* CustomCalloutView.swift */,
+				3E0596DE1ACEE3FA002E7A29 /* CustomAnnotationView.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -644,12 +663,15 @@
 				3EA26F781AC9616100DC7777 /* CodeTestViewController.swift in Sources */,
 				3EF92C9A1ACA524D0031AC86 /* PopOrderViewController.swift in Sources */,
 				3E3708441AC3CA0C00E28C6B /* CountDownViewController.swift in Sources */,
+				3E0596DF1ACEE3FA002E7A29 /* CustomAnnotationView.swift in Sources */,
 				3EA26F4F1AC9109C00DC7777 /* PopVoiceViewController.swift in Sources */,
 				3EF92CAB1ACA9ED90031AC86 /* CityTableViewController.swift in Sources */,
 				8101BE58197CEFD00042E4EA /* MainViewController.swift in Sources */,
+				3EE798541ACED1BC0002D275 /* CustomCalloutView.swift in Sources */,
 				3EF92C9E1ACA65B70031AC86 /* ProvinceTableViewController.swift in Sources */,
 				3E3708901AC537FC00E28C6B /* ProgressView.swift in Sources */,
 				8101BE29197CBBFC0042E4EA /* AppDelegate.swift in Sources */,
+				3EE798521ACE97AD0002D275 /* common.swift in Sources */,
 				3EA26F4B1AC3F8E100DC7777 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

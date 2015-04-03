@@ -10,6 +10,17 @@ import Foundation
 import Alamofire
 
 
+extension String {
+    subscript (r: Range<Int>) -> String {
+        get {
+            let startIndex = advance(self.startIndex, r.startIndex)
+            let endIndex = advance(startIndex, r.endIndex - r.startIndex)
+            
+            return self[Range(start: startIndex, end: endIndex)]
+        }
+    }
+}
+
 class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDelegate, UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
     var location: NSArray?
@@ -169,7 +180,7 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
         
         addressText.frame = CGRectMake(100, 360, 200, 30)
         addressText.placeholder = "请补充详细地址"
-        addressText.keyboardType = UIKeyboardType.NumberPad
+        addressText.keyboardType = UIKeyboardType.Default
         addressText.clearButtonMode = UITextFieldViewMode.WhileEditing
         addressText.borderStyle = UITextBorderStyle.RoundedRect
         addressText.delegate = self
@@ -287,10 +298,36 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
                     println("view up !")
                 }
             )
+            
         }
         //return true
     }
  
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        
+        //禁止输入字数过多
+        if (addressText.text.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) == 240 )
+        {
+            var alert = UIAlertView(title: "温馨提示: ",
+                message: "地址输入长度最高控制在40字！",
+                delegate: self,
+                cancelButtonTitle: "确定")
+            alert.show()
+            
+            return false
+            
+        }
+
+        //按下回车后取消键盘
+        if (string == "\n") {
+            addressText.resignFirstResponder()
+            return false
+        }
+
+        return true
+    }
+    
+    
     //-------------------------------------------------
     //文本框已经结束编辑状态时的委托方法
     //-------------------------------------------------
@@ -314,16 +351,20 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
                 println("view down !")
             }
         )
-        if addressText.text.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 240
+        
+        if (addressText.text.lengthOfBytesUsingEncoding(NSUTF8StringEncoding) > 240 )
         {
             var alert = UIAlertView(title: "温馨提示: ",
                 message: "地址输入长度最高控制在40字！",
                 delegate: self,
                 cancelButtonTitle: "确定")
             alert.show()
-            addressText.text.removeAll(keepCapacity: true)
+            
+            var s = addressText.text
+            addressText.text = s[0...240]
+
         }
-        //return true
+        
     }
     
     
@@ -479,6 +520,16 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
         self.navigationController?.pushViewController(m_ProvinceTableVC, animated: true)
     
     }
+    
+    
+    func changeToCodeTest(){
+        
+        var m_CodeTestVC = CodeTestViewController()
+        m_CodeTestVC.title = "手机验证"
+        self.navigationController?.pushViewController(m_CodeTestVC, animated: true)
+    
+    
+    }
    
     // MARK: - 注册按钮
     
@@ -513,9 +564,7 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
             //若注册成功，则切换到手机验证界面
             if m_isRegisterSuccess {
                 
-                var m_CodeTestVC = CodeTestViewController()
-                m_CodeTestVC.title = "手机验证"
-                self.navigationController?.pushViewController(m_CodeTestVC, animated: true)
+                changeToCodeTest()
             }
         }
         else {
@@ -529,32 +578,53 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
     
     func isInputNotEmpty() -> Bool {
         
+        //保存用户输入的数据到用户信息单例中
+        var lord: LordInfomation! = LordInfomation.shareInstance()
+        
+        
+       if m_toiletType == nil
+       {
+       
+          var alert = UIAlertView(title: "温馨提示: ",
+            message: "请选择厕所类型！",
+            delegate: self,
+            cancelButtonTitle: "确定")
+        alert.show()
+        
+        return false
+       
+       
+       }
+        else {
+            
+            lord.m_id = "0"
+            lord.m_toiletType = m_toiletType
+            lord.m_provision = m_provision
+        
+            //---begin-added-by-MaoYingyong-2014-12-6---
+            //lord.m_photoUrl = ""
+            //---end---added-by-MaoYingyong-2014-12-6---
+            
+           // return true
+        }
+        
         if  cityText.text.isEmpty || addressText.text.isEmpty
         {
             //某些字段未空, 用户未输入
-            var alert = UIAlertView(title: "错误提示: ",
-                message: "厕所地址，\n不允许为空！",
+            var alert = UIAlertView(title: "温馨提示: ",
+                message: "请填写厕所地址！",
                 delegate: self,
                 cancelButtonTitle: "确定")
             alert.show()
             
             return false
         }
-        else {
-            //保存用户输入的数据到用户信息单例中
-            var lord: LordInfomation! = LordInfomation.shareInstance()
+        else{
             
-            lord.m_id = "0"
-            lord.m_toiletType = m_toiletType
-            lord.m_provision = m_provision
             lord.m_address = cityText.text + addressText.text
-            
-            //---begin-added-by-MaoYingyong-2014-12-6---
-            //lord.m_photoUrl = ""
-            //---end---added-by-MaoYingyong-2014-12-6---
-            
             return true
         }
+
     }
     
     

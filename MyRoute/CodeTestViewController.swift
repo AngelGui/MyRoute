@@ -28,7 +28,7 @@ class CodeTestViewController: UIViewController, UITextFieldDelegate{
     
     func initCodeVC(){
         
-        telephoneText.frame = CGRectMake(20, 80, 200, 45)
+        telephoneText.frame = CGRectMake(20, 90, 200, 45)
         telephoneText.placeholder = "请输入联系的手机"
         telephoneText.keyboardType = UIKeyboardType.NumberPad
         telephoneText.clearButtonMode = UITextFieldViewMode.WhileEditing
@@ -38,7 +38,7 @@ class CodeTestViewController: UIViewController, UITextFieldDelegate{
         
         
         var codeBtImage = UIImage(named: "codeTest.png")
-        codeBt.frame = CGRect(x: 245, y: 80, width: 65, height: 40)
+        codeBt.frame = CGRect(x: 245, y: 90, width: 65, height: 40)
         codeBt.setImage(codeBtImage, forState: UIControlState.Normal)
         codeBt.addTarget(self, action: "CodeTest", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(codeBt)
@@ -59,21 +59,22 @@ class CodeTestViewController: UIViewController, UITextFieldDelegate{
         self.view.addSubview(orderBt)
         
         serviceProtocol.text = "点击-开始接单，即表示您同意"
-        serviceProtocol.frame = CGRect(x: 15, y: 280, width: 200, height: 20)
+        serviceProtocol.frame = CGRect(x: 50, y: 280, width: 220, height: 20)
         serviceProtocol.backgroundColor = UIColor.whiteColor()
-        serviceProtocol.font = UIFont.systemFontOfSize(12)
+        serviceProtocol.font = UIFont.systemFontOfSize(15)
         self.view.addSubview(serviceProtocol)
         
         serviceProtocolBt.setTitle("《duangduang拉屎服务协议》", forState: UIControlState.Normal)
         serviceProtocolBt.setTitleColor(UIColor.orangeColor(), forState: UIControlState.Normal)
-        serviceProtocolBt.frame = CGRect(x: 120, y: 280, width: 240, height: 20)
-        serviceProtocolBt.titleLabel?.font = UIFont.systemFontOfSize(12)
+        serviceProtocolBt.frame = CGRect(x: 45, y: 300, width: 220, height: 20)
+        serviceProtocolBt.titleLabel?.font = UIFont.systemFontOfSize(15)
         serviceProtocolBt.addTarget(self, action: "showProtocol", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(serviceProtocolBt)
     }
     
     func  showProtocol(){
         
+        serviceProtocolBt.setTitleColor(UIColor.grayColor(), forState: UIControlState.Highlighted)
         var m_ServiceProtocolVC: ServiceProtocolViewController!
         m_ServiceProtocolVC = ServiceProtocolViewController()
         m_ServiceProtocolVC.navigationItem.title = "服务协议"

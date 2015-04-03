@@ -16,6 +16,7 @@ class OrderPageViewController: UIViewController, MAMapViewDelegate{
     var imageLocated: UIImage?
     var imageNotLocate: UIImage?
     var CancelBt = UIButton()
+    var lordBt = UIButton()
     var timer:NSTimer?
     private var progressView: ProgressView!
     private var label:UILabel!
@@ -27,6 +28,7 @@ class OrderPageViewController: UIViewController, MAMapViewDelegate{
         // Do any additional setup after loading the view, typically from a nib.
         self.edgesForExtendedLayout = UIRectEdge.None
         
+      
         initToolBar()
         initMapView()
         //initBoardView()
@@ -91,6 +93,7 @@ class OrderPageViewController: UIViewController, MAMapViewDelegate{
         mapView!.distanceFilter = 10.0
         mapView!.desiredAccuracy = kCLLocationAccuracyBestForNavigation
         
+        mapView?.showsCompass = false
         
     }
     
@@ -137,8 +140,8 @@ class OrderPageViewController: UIViewController, MAMapViewDelegate{
         m_MainVC.navigationItem.title = "duangduang拉屎"
         m_MainVC.navigationItem.hidesBackButton = true
         self.navigationController?.pushViewController(m_MainVC, animated: true)
-        //self.presentViewController(m_MainVC, animated: true, completion: nil)
-        
+       // m_MainVC.changeToLord()
+     
     }
     
     

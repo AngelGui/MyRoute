@@ -35,7 +35,7 @@ class MainViewController: UIViewController, MAMapViewDelegate{
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.edgesForExtendedLayout = UIRectEdge.None
-
+    
         
         initToolBar()
         initMapView()
@@ -47,11 +47,18 @@ class MainViewController: UIViewController, MAMapViewDelegate{
     
     override func viewDidAppear(animated: Bool) {
         
+        super.viewDidAppear(animated)
+        
+        var pointAnnotation = MAPointAnnotation()
+        pointAnnotation.coordinate = CLLocationCoordinate2DMake(39.989631, 116.481018)
+        pointAnnotation.title = "duangduang拉屎"
+        pointAnnotation.subtitle = "路边拉屎终结者"
+        mapView?.addAnnotation(pointAnnotation)
     }
 
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-    }
+//    override func viewDidLayoutSubviews() {
+//        super.viewDidLayoutSubviews()
+//    }
 
     //MARK:- Initialization
     //MARK: ---创建地图并显示用户的当前位置---
@@ -67,6 +74,8 @@ class MainViewController: UIViewController, MAMapViewDelegate{
         
         mapView!.distanceFilter = 10.0
         mapView!.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+        
+        mapView?.showsCompass = false
     }
     
     //MARK: ---创建首页左下角的定位与否按钮---
@@ -97,7 +106,9 @@ class MainViewController: UIViewController, MAMapViewDelegate{
         boardView = UIImageView()
         var boardImage = UIImage(named: "board.png")
         boardView!.image = boardImage
-        boardView!.frame = CGRect(x: 0,y: self.view.frame.height-230,width: 320,height:168)
+       // boardView!.frame = CGRect(x: 0,y: self.view.frame.height-230,width: 320,height:168)
+        boardView!.frame = CGRect(x: 0,y: self.view.frame.height-230,width: self.view.frame.width, height: self.view.frame.height-168)
+        boardView.autoresizingMask =  UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleHeight
         self.view.addSubview(boardView!)
 
         //为坑主和屎客添加轻扫手势
@@ -116,8 +127,9 @@ class MainViewController: UIViewController, MAMapViewDelegate{
         
         var userImage = UIImage(named:"user1.png")
         userBt.setImage(userImage, forState: UIControlState.Normal)
-        userBt.frame = CGRect(x: 150, y: self.view.frame.height-225, width: 25, height: 45)
+        userBt.frame = CGRect(x: 160, y: self.view.frame.height-225, width: 25, height: 45)
         userBt.addTarget(self, action: "changeToUser", forControlEvents: UIControlEvents.TouchUpInside)
+        //userBt.autoresizingMask = UIViewAutoresizing.FlexibleHeight | UIViewAutoresizing.FlexibleWidth
         self.view.addSubview(userBt)
         
         
@@ -132,6 +144,7 @@ class MainViewController: UIViewController, MAMapViewDelegate{
         tipLabel.frame = CGRect(x: 15, y: self.view.frame.height-160, width: 100, height: 20)
         tipLabel.backgroundColor = UIColor.whiteColor()
         tipLabel.font = UIFont.systemFontOfSize(15)
+//        tipLabel.autoresizingMask = UIViewAutoresizing.FlexibleHeight | UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleLeftMargin
         self.view.addSubview(tipLabel)
         
         var tip0Image = UIImage(named: "0yuan2.png")
@@ -269,45 +282,11 @@ class MainViewController: UIViewController, MAMapViewDelegate{
     var timer: NSTimer?
     func popVoiceWin(){
 
-        /*
-        var m_voiceImage = UIImage(named: "voiceWin.png")
-        var m_voiceViewImage = UIImageView(image: m_voiceImage)
-        self.view.addSubview(m_voiceViewImage)
-        UIView.animateWithDuration(0.1, delay: 0, options: .CurveEaseOut, animations: {
-        
-           self.view.alpha = 0.5
-            m_voiceViewImage.alpha = 1
-           m_voiceViewImage.frame = CGRect(x: 5, y: self.view.frame.height-155, width: 110, height: 80)
-        
-            }, completion: {
-            finished in
-                println(__FUNCTION__, __LINE__)
-        
-        })
-        */
                 
         m_PopVoiceVC.view.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
         self.presentViewController(m_PopVoiceVC, animated: false, completion: nil)
         timer?.invalidate()
         timer = NSTimer.scheduledTimerWithTimeInterval(3, target: self, selector: "tapGesture:", userInfo: nil, repeats: false)
-        
-        //他的参数要一个controller，不是一个view，怎么高
-//        var m_popVC = PopViewController()
-//        //m_popVC.setStyle()
-//
-//        m_popVC.modalPresentationStyle = .Popover
-//        m_popVC.popoverPresentationController!.delegate = self
-//        
-//        m_popVC.preferredContentSize = CGSize(width:320,height:100)
-//        
-//        m_popVC.view.alpha = 0.5
-//        m_popVC.view.backgroundColor = UIColor.redColor()
-//
-//        self.popoverPresentationController?.sourceView = self.voiceBt//这里填一个button
-//        self.popoverPresentationController?.sourceRect = self.voiceBt.bounds//你改一下button
-//       //  m_PopVC.不是这么改的，是要打开PopViewController那个类改的吧
-//        self.presentViewController(m_popVC, animated: true, completion: nil)
-
 
     }
     
@@ -397,20 +376,47 @@ class MainViewController: UIViewController, MAMapViewDelegate{
             ("accuracy", "\(location.horizontalAccuracy)m"),
             ("altitude", NSString(format: "%.2fm", location.altitude))]
        */
+        
+        var x = location.coordinate.latitude
+        var y = location.coordinate.longitude
+        var A:CGPoint = CGPoint(x: x-0.01, y: y-0.01)
+        var B:CGPoint = CGPoint(x: x-0.01, y: y+0.01)
+        var C:CGPoint = CGPoint(x: x+0.01, y: y-0.01)
+        var D:CGPoint = CGPoint(x: x+0.01, y: y+0.01)
+        
+        var toiletImage = UIImage(named: "toilet.png")
+        var toiletImageView = UIImageView(image: toiletImage)
+        toiletImageView.center = A
+        mapView.addSubview(toiletImageView)
+        
+        var toiletIconImage = UIImage(named: "toilet.png")
+        var toiletImageIconView = UIImageView(image: toiletIconImage)
+        toiletImageIconView.center = B
+        mapView.addSubview(toiletImageIconView)
 
     }
     
-    /*
+    
     //MARK: ---显示用户自定义的标记图标---
     func mapView(mapView: MAMapView!, viewForAnnotation annotation: MAAnnotation!) -> MAAnnotationView! {
      
-        var m_image = UIImage(named:"user2.png")
-        var annotationView = MAAnnotationView()
-        annotationView.image = m_image
+//        if annotation == isKindOfClass(MAPointAnnotation)
+//        {
+//            var pointReuseIdentifier: NSString = "pointReuseIdentifier"
+//            var annotationView = MAPinAnnotationView(annotation: annotation, reuseIdentifier: pointReuseIdentifier)
+//            annotationView.canShowCallout = true
+//            annotationView.draggable = true
+//            return annotationView
+//        }
+//        return nil
+        var annotationView = CustomAnnotationView()
+        annotationView.image = UIImage(named: "lord2.png")
+        annotationView.canShowCallout = false
+        annotationView.centerOffset = CGPointMake(0, -18)
         return annotationView
         
     }
-    */
+
 
     func mapView(mapView: MAMapView, didChangeUserTrackingMode mode: MAUserTrackingMode, animated: Bool) {
         if mode == MAUserTrackingMode.None {
@@ -420,5 +426,18 @@ class MainViewController: UIViewController, MAMapViewDelegate{
             locationButton?.setImage(imageLocated, forState: UIControlState.Normal)
         }
     }
-
+    
+    /*
+    //MARK: ---显示用户自定义的标记图标---
+    func mapView(mapView: MAMapView!, viewForAnnotation annotation: MAAnnotation!) -> MAAnnotationView! {
+        
+    
+        var m_image = UIImage(named:"user2.png")
+        var annotationView = MAAnnotationView()
+        annotationView.image = m_image
+        
+        return annotationView
+     
+    }
+   */
 }

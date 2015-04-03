@@ -96,6 +96,8 @@ class CountDownViewController: UIViewController, MAMapViewDelegate{
         
         mapView!.distanceFilter = 10.0
         mapView!.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+        
+        mapView?.showsCompass = false
     }
     
     //MARK: ---创建首页左下角的定位与否按钮---
@@ -142,12 +144,14 @@ class CountDownViewController: UIViewController, MAMapViewDelegate{
     
         //self.dismissViewControllerAnimated(true, completion: nil)
        //MARK:---切换到倒计时界面---
-         var m_MainVC: MainViewController!
-    
+        
+        var m_MainVC: MainViewController!
+        
         m_MainVC = MainViewController()
-        m_MainVC.title = "主页"
-        self.presentViewController(m_MainVC, animated: true, completion: nil)
-             
+        m_MainVC.navigationItem.title = "duangduang拉屎"
+        m_MainVC.navigationItem.hidesBackButton = true
+        self.navigationController?.pushViewController(m_MainVC, animated: true)
+        
     }
 
    

@@ -29,7 +29,7 @@ class PopOrderViewController: UIViewController{
         orderView = UIImageView()
         var orderImage = UIImage(named: "orderWin.png")
         orderView!.image = orderImage
-        orderView!.frame = CGRect(x: 190, y: self.view.frame.height-150, width: 116, height: 143)
+        orderView!.frame = CGRect(x: 221, y: self.view.frame.height-132, width: 91, height: 123)
         self.view.addSubview(orderView!)
         
     }

@@ -132,9 +132,9 @@ class CountDownViewController: UIViewController, MAMapViewDelegate{
         self.view.addSubview(boardView!)
         
         
-        var gotoWCImage = UIImage(named: "gotoWCBt.png")
-        CancelBt.setImage(gotoWCImage, forState: UIControlState.Normal)
-        CancelBt.frame = CGRect(x: 45, y: self.view.frame.height-120, width: 230, height: 35)
+        var CancelOrderImage = UIImage(named: "CancelOrder.png")
+        CancelBt.setImage(CancelOrderImage, forState: UIControlState.Normal)
+        CancelBt.frame = CGRect(x: 58, y: self.view.frame.height-120, width: 204, height: 35)
         CancelBt.addTarget(self, action: "changeToMainVC", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(CancelBt)
  

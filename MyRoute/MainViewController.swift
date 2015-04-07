@@ -127,7 +127,7 @@ class MainViewController: UIViewController, MAMapViewDelegate{
         
         var userImage = UIImage(named:"user1.png")
         userBt.setImage(userImage, forState: UIControlState.Normal)
-        userBt.frame = CGRect(x: 160, y: self.view.frame.height-225, width: 25, height: 45)
+        userBt.frame = CGRect(x: 160, y: self.view.frame.height-225, width: 23, height: 37)
         userBt.addTarget(self, action: "changeToUser", forControlEvents: UIControlEvents.TouchUpInside)
         //userBt.autoresizingMask = UIViewAutoresizing.FlexibleHeight | UIViewAutoresizing.FlexibleWidth
         self.view.addSubview(userBt)
@@ -135,7 +135,7 @@ class MainViewController: UIViewController, MAMapViewDelegate{
         
         var lordImage = UIImage(named:"lord2.png")
         lordBt.setImage(lordImage, forState: UIControlState.Normal)
-        lordBt.frame = CGRect(x: 200, y: self.view.frame.height-225, width: 25, height: 45)
+        lordBt.frame = CGRect(x: 200, y: self.view.frame.height-225, width: 23, height: 37)
         lordBt.addTarget(self, action: "changeToLord", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(lordBt)
         
@@ -167,19 +167,19 @@ class MainViewController: UIViewController, MAMapViewDelegate{
         
         var voiceImage = UIImage(named: "voiceBt.png")
         voiceBt.setImage(voiceImage, forState: UIControlState.Normal)
-        voiceBt.frame = CGRect(x: 10, y: self.view.frame.height-120, width: 50, height: 50)
+        voiceBt.frame = CGRect(x: 8, y: self.view.frame.height-115, width: 42, height: 42)
         voiceBt.addTarget(self, action: "popVoiceWin", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(voiceBt)
         
         var gotoWCImage = UIImage(named: "gotoWCBt.png")
         gotoWCBt.setImage(gotoWCImage, forState: UIControlState.Normal)
-        gotoWCBt.frame = CGRect(x: 75, y: self.view.frame.height-115, width: 170, height: 35)
+        gotoWCBt.frame = CGRect(x: 58, y: self.view.frame.height-110, width: 204, height: 35)
         gotoWCBt.addTarget(self, action: "changeToCountDown:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(gotoWCBt)
         
         var orderImage = UIImage(named: "orderBt.png")
         orderBt.setImage(orderImage, forState: UIControlState.Normal)
-        orderBt.frame = CGRect(x: 255, y: self.view.frame.height-120, width: 50, height: 50)
+        orderBt.frame = CGRect(x: 270, y: self.view.frame.height-115, width: 42, height: 42)
         orderBt.addTarget(self, action: "popOrderWin", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(orderBt)
     }
@@ -200,13 +200,13 @@ class MainViewController: UIViewController, MAMapViewDelegate{
         
         var userImage = UIImage(named:"user1.png")
         userBt.setImage(userImage, forState: UIControlState.Normal)
-        userBt.frame = CGRect(x: 150, y: self.view.frame.height-160, width: 25, height: 45)
+        userBt.frame = CGRect(x: 150, y: self.view.frame.height-160, width: 23, height: 37)
         self.view.addSubview(userBt)
         
         
         var lordImage = UIImage(named:"lord2.png")
         lordBt.setImage(lordImage, forState: UIControlState.Normal)
-        lordBt.frame = CGRect(x: 200, y: self.view.frame.height-160, width: 25, height: 45)
+        lordBt.frame = CGRect(x: 200, y: self.view.frame.height-160, width: 23, height: 37)
         self.view.addSubview(lordBt)
         
         tip0Bt.alpha = 1
@@ -222,7 +222,7 @@ class MainViewController: UIViewController, MAMapViewDelegate{
         gotoWCBt.setImage(gotoWCImage, forState: UIControlState.Normal)
         gotoWCBt.enabled = true
         giveWCBt.enabled = false
-        gotoWCBt.frame = CGRect(x: 75, y: self.view.frame.height-50, width: 170, height: 35)
+        gotoWCBt.frame = CGRect(x: 58, y: self.view.frame.height-46, width: 204, height: 35)
         gotoWCBt.addTarget(self, action: "changeToCountDown:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(gotoWCBt)
     }
@@ -231,12 +231,12 @@ class MainViewController: UIViewController, MAMapViewDelegate{
 
         var userImage = UIImage(named:"user2.png")
         userBt.setImage(userImage, forState: UIControlState.Normal)
-        userBt.frame = CGRect(x: 100, y: self.view.frame.height-160, width: 25, height: 45)
+        userBt.frame = CGRect(x: 100, y: self.view.frame.height-160, width: 23, height: 37)
         self.view.addSubview(userBt)
         
         var lordImage = UIImage(named:"lord1.png")
         lordBt.setImage(lordImage, forState: UIControlState.Normal)
-        lordBt.frame = CGRect(x: 150, y: self.view.frame.height-160, width: 25, height: 45)
+        lordBt.frame = CGRect(x: 150, y: self.view.frame.height-160, width: 23, height: 37)
         self.view.addSubview(lordBt)
         
         tip0Bt.alpha = 0
@@ -252,7 +252,7 @@ class MainViewController: UIViewController, MAMapViewDelegate{
         giveWCBt.setImage(giveWCImage, forState: UIControlState.Normal)
         giveWCBt.enabled = true
         gotoWCBt.enabled = false
-        giveWCBt.frame = CGRect(x: 75, y: self.view.frame.height-50, width: 170, height: 35)
+        giveWCBt.frame = CGRect(x: 58, y: self.view.frame.height-46, width: 204, height: 35)
         giveWCBt.addTarget(self, action: "changeToCountDown:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(giveWCBt)
     }

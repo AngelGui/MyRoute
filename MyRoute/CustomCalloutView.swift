@@ -95,7 +95,7 @@ class CustomCalloutView: UIView {
         
         // 添加图片，即商户图
         self.portraitView = UIImageView(frame:CGRectMake(kPortraitMargin, kPortraitMargin, kPortraitWidth, kPortraitHeight))
-        var m_image = UIImage(named: "0yuan2.png")
+        var m_image = UIImage(named: "smileFace.png")
 
         self.portraitView.image = m_image
       //  self.portraitView.backgroundColor = UIColor.blackColor()

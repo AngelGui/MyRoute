@@ -122,13 +122,13 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
         self.view.addSubview(toiletTypeLabel)
         
         var sitToiletImage = UIImage(named: "sitToilet2.png")
-        sitToilet.frame = CGRect(x: 30, y: 170, width: 120, height: 40)
+        sitToilet.frame = CGRect(x: 30, y: 170, width: 116, height: 32)
         sitToilet.setImage(sitToiletImage, forState: UIControlState.Normal)
         sitToilet.addTarget(self, action: "changeToiletType:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(sitToilet)
         
         var crouchToiletImage = UIImage(named: "crouchToliet1.png")
-        crouchToilet.frame = CGRect(x: 190, y: 170, width: 110, height: 40)
+        crouchToilet.frame = CGRect(x: 175, y: 170, width: 116, height: 32)
         crouchToilet.setImage(crouchToiletImage, forState: UIControlState.Normal)
         crouchToilet.addTarget(self, action: "changeToiletType:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(crouchToilet)
@@ -141,18 +141,18 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
         self.view.addSubview(providersLabel)
         
 
-        tissue.frame = CGRect(x: 30, y: 260, width: 75, height: 40)
+        tissue.frame = CGRect(x: 25, y: 260, width: 75, height: 32)
         tissue.setImage(tissueImage, forState: UIControlState.Normal)
         tissue.addTarget(self, action: "changeStatus:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(tissue)
 
-        wifi.frame = CGRect(x: 125, y: 260, width: 75, height: 40)
+        wifi.frame = CGRect(x: 124, y: 260, width: 75, height: 32)
         wifi.setImage(wifiImage, forState: UIControlState.Normal)
         wifi.addTarget(self, action: "changeStatus:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(wifi)
         
 
-        washer.frame = CGRect(x: 220, y: 260, width: 75, height: 40)
+        washer.frame = CGRect(x: 223, y: 260, width: 75, height: 32)
         washer.setImage(washerImage, forState: UIControlState.Normal)
         washer.addTarget(self, action: "changeStatus:", forControlEvents: UIControlEvents.TouchUpInside)
         self.view.addSubview(washer)
@@ -506,8 +506,9 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
         UIImagePNGRepresentation(toiletPhotoImage).writeToFile(filePath, atomically: true)
         
         //5.保存路径到用户信息单例类对象中
-//        var user: LoginUser! = LoginUser.shareInstance()
-//        user.m_photoUrl = filePath
+        var lord: LordInfomation! = LordInfomation.shareInstance()
+        lord.m_toiletPhotoUrl = filePath
+        self.m_toiletPhotoUrl = filePath
     
     }
     
@@ -622,6 +623,23 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
         else{
             
             lord.m_address = cityText.text + addressText.text
+           // return true
+        }
+        
+        if m_toiletPhotoUrl == nil
+        {
+            var alert = UIAlertView(title: "温馨提示: ",
+                message: "请填写厕所照片！",
+                delegate: self,
+                cancelButtonTitle: "确定")
+            alert.show()
+            
+            return false
+        
+        }
+        else{
+            
+            lord.m_toiletPhotoUrl = m_toiletPhotoUrl
             return true
         }
 

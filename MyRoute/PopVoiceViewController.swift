@@ -30,7 +30,7 @@ class PopVoiceViewController: UIViewController{
         voiceView = UIImageView()
         var voiceImage = UIImage(named: "voiceWin.png")
         voiceView!.image = voiceImage
-        voiceView!.frame = CGRect(x: 8, y: self.view.frame.height-148, width: 120, height: 140)
+        voiceView!.frame = CGRect(x: 8, y: self.view.frame.height-132, width: 99, height: 123)
         self.view.addSubview(voiceView!)
         
         }

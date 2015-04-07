@@ -14,39 +14,6 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "map.CitiesTableViewController.tableView (map.CitiesTableViewController)(ObjectiveC.UITableView, didSelectRowAtIndexPath : ObjectiveC.NSIndexPath) -&gt; ():CitiesTableViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "province">
-            </PersistentString>
-            <PersistentString
-               value = "indexPath.length">
-            </PersistentString>
-            <PersistentString
-               value = "self.dataArray">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "map.MainViewController.changeIdentity2 (map.MainViewController)(ObjectiveC.UISwipeGestureRecognizer) -&gt; ():MainViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "gesture.direction">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "map.ProvinceTableViewController.viewDidLoad (map.ProvinceTableViewController)() -&gt; ():ProvinceTableViewController.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "dataArray">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "map.RegisterViewController.readProvinceCityInfo (map.RegisterViewController)() -&gt; ():RegisterViewController.swift">
-      </ContextState>
-      <ContextState
          contextName = "map.NextCityTableViewController.tableView (map.NextCityTableViewController)(ObjectiveC.UITableView, didSelectRowAtIndexPath : ObjectiveC.NSIndexPath) -&gt; ():NextCityTableViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -61,10 +28,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "map.RegisterViewController.registerBtnPress (map.RegisterViewController)(ObjectiveC.UIButton) -&gt; ():RegisterViewController.swift">
+         contextName = "map.CityTableViewController.tableView (map.CityTableViewController)(ObjectiveC.UITableView, numberOfRowsInSection : Swift.Int) -&gt; Swift.Int:CityTableViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "m_isRegisterSuccess">
+               value = "cityArray">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -83,6 +50,55 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "map.RegisterViewController.readProvinceCityInfo (map.RegisterViewController)() -&gt; ():RegisterViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "map.CitiesTableViewController.tableView (map.CitiesTableViewController)(ObjectiveC.UITableView, didSelectRowAtIndexPath : ObjectiveC.NSIndexPath) -&gt; ():CitiesTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "province">
+            </PersistentString>
+            <PersistentString
+               value = "indexPath.length">
+            </PersistentString>
+            <PersistentString
+               value = "self.dataArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "map.RegisterViewController.registerBtnPress (map.RegisterViewController)(ObjectiveC.UIButton) -&gt; ():RegisterViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "m_isRegisterSuccess">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "map.RegisterViewController.savePhoto (map.RegisterViewController)() -&gt; ():RegisterViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "m_toiletPhotoUrl">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "map.LordInfomation.m_toiletPhotoUrl.setter : Swift.ImplicitlyUnwrappedOptional&lt;Swift.String&gt;:LordInfomation.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "map.ProvinceTableViewController.viewDidLoad (map.ProvinceTableViewController)() -&gt; ():ProvinceTableViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "dataArray">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "map.MainViewController.mapView (map.MainViewController)(Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.MAMapView&gt;, viewForAnnotation : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.MAAnnotation&gt;) -&gt; Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.MAAnnotationView&gt;:MainViewController.swift">
          <PersistentStrings>
             <PersistentString
@@ -91,10 +107,10 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "map.CityTableViewController.tableView (map.CityTableViewController)(ObjectiveC.UITableView, numberOfRowsInSection : Swift.Int) -&gt; Swift.Int:CityTableViewController.swift">
+         contextName = "map.MainViewController.changeIdentity2 (map.MainViewController)(ObjectiveC.UISwipeGestureRecognizer) -&gt; ():MainViewController.swift">
          <PersistentStrings>
             <PersistentString
-               value = "cityArray">
+               value = "gesture.direction">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

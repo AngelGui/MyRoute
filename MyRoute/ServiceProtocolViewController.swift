@@ -1,7 +1,7 @@
 
 //
-//  Created by Maoyingyong on 14/10/25.
-//  Copyright (c) 2014年 goodmao. All rights reserved.
+//  Created by 陈桂 on 15/3/28.
+//  Copyright (c) 2015年 AutoNavi. All rights reserved.
 //
 
 import Foundation

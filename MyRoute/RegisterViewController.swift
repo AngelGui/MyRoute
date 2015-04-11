@@ -59,8 +59,10 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
         self.view.backgroundColor = UIColor.whiteColor()
         
         initRegiterVC()
+        createOSSClient()
         createTapGesture()
         readProvinceCityInfo()
+
     }
     
     //MARK: ---读取沙盒中的文件ProvincesAndCities.plist----
@@ -465,7 +467,8 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
         
         //保存用户头像到文件夹Documents中
         savePhoto()
-
+        
+        updateloadImage(toiletPhotoImage)
     }
     
     //MARK:----保存用户头像到文件夹Documents中----
@@ -511,6 +514,110 @@ class RegisterViewController: UIViewController, MAMapViewDelegate, UITextFieldDe
         self.m_toiletPhotoUrl = filePath
     
     }
+
+    func createOSSClient(){
+    
+        var ossclient =  OSSClient.sharedInstanceManage()
+        
+        var accessKey =  "zwfTw8BrXxIXzBb0"
+        
+        var secretKey =  "HrvqQQaYiAYk0LzFjYWaC1eVplFwz5"
+        
+//        ossclient.generateToken(
+//        (NSString(), NSString(), NSString(), NSString(), NSString(), NSString()) in
+//        {   var signature = "test"
+//            var content =  NSString(format:"%@\n%@\n%@\n%@\n%@%", method, md5, type, date, xoss, resource)
+//            signature = OSSTool(data:content,withKey:secretKey)
+//            signature = NSString(format:"OSS %@:%", accessKey, signature)
+//            return signature
+//        })
+        ossclient.globalDefaultBucketHostId = "oss-cn-beijing.aliyuncs.com"
+        ossclient.globalDefaultBucketAcl.value = 1
+        
+//        accessKey = ""
+//        secretKey = ""
+    
+    
+    }
+    
+    
+    //MARK: --- 保存用户头像到阿里云上面 ---
+    func updateloadImage(image:UIImage)
+    {
+        
+
+//        var imageData =  UIImageJPEGRepresentation(image, 1)
+//        if (imageData.length >= 50000)
+//        {
+//            imageData = UIImageJPEGRepresentation(image, 0.1)
+//        }
+        
+        
+        var bucket =  OSSBucket(bucket:"ddlsimage")
+        
+        
+        bucket.acl.value = 1       // 指明该Bucket的访问权限
+        bucket.ossHostId = "oss-cn-beijing.aliyuncs.com" // 指明该Bucket所在数据中心的域名
+        
+//        var uuid = NSUUID() as NSString
+//          uuid.stringByReplacingOccurrencesOfString:"-",withString:""
+//      var uuid =  [[NSUUID.UUID() UUIDString],stringByReplacingOccurrencesOfString:"-",withString:""
+//        
+//        var imageName =  NSString(format:"%@.%",uuid,imagetype)
+        
+//        
+//        var testFile =  OSSData(bucket:bucket, withKey:image.description)
+//        
+////        uuid = nil
+//        
+//        
+//        testFile.setData(imageData, withType:imagetype)
+//        
+//        imageName = nil
+//        
+//        println("%@",testFile.getResourceURL())
+//        testFile.uploadWithUploadCallback(isSuccess:Bool, error:NSError)
+//            {
+//                _picker.dismissViewController(animated:true,completion:nil)
+//                
+//                
+//                if (isSuccess) {
+//                    
+//                    
+//                    self.uploadWithcompleteBack(testFile.getResourceURL())
+//                    
+//                    println("%@",testFile.getResourceURL())
+//                    
+//                } else {
+//                    self.uploadWithErrorBack(error)
+//                    println("errorInfo_testFilePartsUpload:%@", error.userInfo())
+//                }
+//            }
+//                
+//        }
+    }
+
+    
+    /*
+    *上传成功回调接口
+    */
+    func uploadWithcompleteBack(url: NSString)
+    {
+        
+        
+    }
+    
+    /*
+    *上传出错回调接口
+    */
+    func uploadWithErrorBack(error: NSError)
+    {
+        
+        
+    }
+
+    
+    
     
     func changeToProvince(){
      

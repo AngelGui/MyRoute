@@ -9,10 +9,15 @@
 import UIKit
 class ProgressView:UIView {
    
-    private var trackLayer: CAShapeLayer!
-    private var trackPath: UIBezierPath!
-    private var progressLayer: CAShapeLayer!
-    private var progressPath: UIBezierPath!
+//    private var trackLayer: CAShapeLayer!
+//    private var trackPath: UIBezierPath!
+//    private var progressLayer: CAShapeLayer!
+//    private var progressPath: UIBezierPath!
+    
+    var trackLayer: CAShapeLayer!
+    var trackPath: UIBezierPath!
+    var progressLayer: CAShapeLayer!
+    var progressPath: UIBezierPath!
     
     private var prgWidth: CGFloat = 10.0
     

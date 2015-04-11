@@ -29,7 +29,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8101BE34197CBBFC0042E4EA"
-               BuildableName = "MyRouteTests.xctest"
+               BuildableName = "MyRoute.temp_caseinsensitive_renameTests.xctest"
                BlueprintName = "MyRouteTests"
                ReferencedContainer = "container:MyRoute.xcodeproj">
             </BuildableReference>
@@ -47,7 +47,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8101BE34197CBBFC0042E4EA"
-               BuildableName = "MyRouteTests.xctest"
+               BuildableName = "MyRoute.temp_caseinsensitive_renameTests.xctest"
                BlueprintName = "MyRouteTests"
                ReferencedContainer = "container:MyRoute.xcodeproj">
             </BuildableReference>

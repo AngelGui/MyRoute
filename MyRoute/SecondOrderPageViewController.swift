@@ -1,8 +1,8 @@
 //
-//  OrderPageViewController.swift
+//  SecondOrderPageViewController.swift
 //  MyRoute
 //
-//  Created by 陈桂 on 15/3/31.
+//  Created by 陈桂 on 15/4/10.
 //  Copyright (c) 2015年 AutoNavi. All rights reserved.
 //
 
@@ -15,12 +15,9 @@ class OrderPageViewController: UIViewController, MAMapViewDelegate{
     var locationButton: UIButton?
     var imageLocated: UIImage?
     var imageNotLocate: UIImage?
-    var CancelBt = UIButton()
-    var lordBt = UIButton()
     var timer:NSTimer?
-    var progressView: ProgressView!
-    var label:UILabel!
-    var progress: CGFloat = 0.0
+
+    var occupingBt = UIButton()!
     
     
     override func viewDidLoad() {
@@ -28,88 +25,14 @@ class OrderPageViewController: UIViewController, MAMapViewDelegate{
         // Do any additional setup after loading the view, typically from a nib.
         self.edgesForExtendedLayout = UIRectEdge.None
         
-      
+        
         initToolBar()
         initMapView()
-        //initBoardView()
-        createProgressView()
-        
-        
-        //MARK: ---- 告诉后台我在供厕中，接收推送消息 ----
-        Alamofire.request(.POST, "厕主供厕中接口",
-            parameters: ["UserID":UDID,
-                "UserTip":userTip,
-                "UserLat":userLat,
-                "UserLon":userLon ])
-            .responseString { (request, response, string, error) in
-                
-                println("\n\n======注册数据===========")
-                
-                println("--- request: --- \n \(request)")
-                println("--- response: --- \n \(response)")
-                println("--- data: --- \n \(data)")
-                println("--- error:  --- \n \(error)")
-                /*
-                //下行参数：
-                发送成功: {"result": [ {"hbCode":10, "state":1} ]}
-                发送失败: {"result": [ {"hbCode":0,  "state":1} ]}
-                */
-                var resultDicData = data as NSDictionary
-                var resultLoginArray = resultDicData.objectForKey("result") as NSArray
-                println("resultLoginArray : \(resultLoginArray)")
-                
-                var resultDic = resultLoginArray.objectAtIndex(0) as NSDictionary
-                println("resultDic : \(resultDic)")
-                
-                if 10 == resultDic.objectForKey("hbCode") as UInt {
-                    println("已经发送了推送标志位")
-                 
-                 //弹出一个订单弹窗
-                 //弹出一个抢单按钮
-                    
-                }
-
-        }
-        
-
-        
+        initBoardView()
+       
     }
     
-       func createProgressView(){
-        
-        progressView = ProgressView(frame: CGRectMake(100.0, self.view.frame.height-200, 120.0, 120.0))
-        self.view.addSubview(progressView)
-        
-        label = UILabel(frame: CGRectMake(110.0, 200.0, 100.0, 25.0))
-        label.textColor = UIColor.blackColor()
-        label.textAlignment = NSTextAlignment.Center
-        label.font = UIFont.systemFontOfSize(18.0)
-        label.hidden = true
-        self.view.addSubview(label)
-        
-        var provisionImage = UIImage(named: "provision.png")
-        CancelBt.setImage(provisionImage, forState: UIControlState.Normal)
-        CancelBt.frame = CGRect(x: 110, y: self.view.frame.height-190, width: 100, height: 100)
-        CancelBt.addTarget(self, action: "changeToMainVC", forControlEvents: UIControlEvents.TouchUpInside)
-        self.view.addSubview(CancelBt)
-        
-        
-        timer?.invalidate()
-        timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateTime:", userInfo: nil, repeats: true)
-        
-    }
-    func updateTime(timer: NSTimer){
-        if progress > 0.999{
-            progress = 0.0
-            
-        }else{
-            
-            progress += 0.1
-        }
-        label.text = "\(progress)"
-        progressView.setProgress(progress)
-    }
-    
+     
     override func viewDidAppear(animated: Bool) {
         
     }
@@ -161,27 +84,87 @@ class OrderPageViewController: UIViewController, MAMapViewDelegate{
     
     
     func initBoardView(){
-    
-        var provisionImage = UIImage(named: "provision.png")
-        CancelBt.setImage(provisionImage, forState: UIControlState.Normal)
-        CancelBt.frame = CGRect(x: 110, y: self.view.frame.height-200, width: 100, height: 110)
-        CancelBt.addTarget(self, action: "changeToMainVC", forControlEvents: UIControlEvents.TouchUpInside)
-        self.view.addSubview(CancelBt)
+        
+        var bgDialogueView = UIImageView()!
+        var bgDialogueImage = UIImage(named: "bgDialogue.png")
+        bgDialogueView!.image = bgDialogueImage
+        bgDialogueView!.frame = CGRect(x: 10,y: 40,width: 300, height:310)
+        self.view.addSubview(bgDialogueView!)
+        
+        var closeView = UIImageView()!
+        var closeImage = UIImage(named: "close.png")
+        closeView!.image = closeImage
+        closeView!.frame = CGRect(x: 294,y: self.view.frame.height-230,width: 26, height: 26)
+        self.view.addSubview(closeView!)
+        
+        var distanceLabel = UILabel()!
+        distanceLabel!.frame = CGRect(x: 294,y: self.view.frame.height-230,width: 26, height: 26)
+        distanceLabel.text = "距您\(distance)公里"
+        self.view.addSubview(distanceLabel)
+        
+        var tipView = UIImageView()!
+        tipView!.frame = CGRect(x: 294,y: self.view.frame.height-230,width: 26, height: 26)
+        var tipImage = UIImage(named: "tip\(tip).png")
+        tipView!.image = tipImage
+        self.view.addSubview(tipView!)
+        
+        var occupingImage = UIImage(named: "occuping.png")
+        occupingBt.setImage(occupingImage, forState: UIControlState.Normal)
+        occupingBt.frame = CGRect(x: 110, y: self.view.frame.height-190, width: 100, height: 100)
+        occupingBt.addTarget(self, action: "changeNextVC", forControlEvents: UIControlEvents.TouchUpInside)
+        self.view.addSubview(occupingBt)
 
+        
         
     }
     
-    func changeToMainVC(){
+    func changeNextVC(){
         
         //self.dismissViewControllerAnimated(true, completion: nil)
-        var m_MainVC: MainViewController!
+        var lord: LordInfomation! = LordInfomation.shareInstance()
         
-        m_MainVC = MainViewController()
-        m_MainVC.navigationItem.title = "duangduang拉屎"
-        m_MainVC.navigationItem.hidesBackButton = true
-        self.navigationController?.pushViewController(m_MainVC, animated: true)
-       // m_MainVC.changeToLord()
-     
+        Alamofire.request(.POST, "用户发送订单接口",
+            parameters: ["lordToken":lord.m_phoneNumber])
+            .responseString { (request, response, string, error) in
+                
+                println("\n\n======注册数据===========")
+                
+                println("--- request: --- \n \(request)")
+                println("--- response: --- \n \(response)")
+                println("--- data: --- \n \(data)")
+                println("--- error:  --- \n \(error)")
+                
+                /*
+                //下行参数：
+                发送成功: {"result": [ {"hbCode":10, "state":1} ]}
+                发送失败: {"result": [ {"hbCode":0,  "state":1} ]}
+                */
+                var resultDicData = data as NSDictionary
+                var resultLoginArray = resultDicData.objectForKey("result") as NSArray
+                println("resultLoginArray : \(resultLoginArray)")
+                
+                var resultDic = resultLoginArray.objectAtIndex(0) as NSDictionary
+                println("resultDic : \(resultDic)")
+                
+                if 10 == resultDic.objectForKey("hbCode") as UInt {
+                    println("抢单成功")
+                
+                m_WaitingForUserVC = WaitingForUserViewController()
+                m_WaitingForUserVC!.title = "等待应答"
+                // self.presentViewController(m_CountDownVC, animated: true, completion: nil)
+                self.navigationController?.pushViewController(m_WaitingForUserVC, animated: true)
+                }
+                else
+                {
+                    
+                    var occupiedImage = UIImage(named: "occupied.png")
+                    occupingBt.setImage(occupiedImage, forState: UIControlState.Normal)
+                    occupingBt.frame = CGRect(x: 110, y: self.view.frame.height-190, width: 100, height: 100)
+                    self.view.addSubview(occupingBt)
+                
+                }
+        }
+        
     }
     
     

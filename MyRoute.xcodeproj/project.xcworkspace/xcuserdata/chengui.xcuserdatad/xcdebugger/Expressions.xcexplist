@@ -20,10 +20,10 @@
                value = "selectionCity">
             </PersistentString>
             <PersistentString
-               value = "preViewController!">
+               value = "indexPath.length">
             </PersistentString>
             <PersistentString
-               value = "indexPath.length">
+               value = "preViewController!">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -59,10 +59,10 @@
                value = "province">
             </PersistentString>
             <PersistentString
-               value = "indexPath.length">
+               value = "self.dataArray">
             </PersistentString>
             <PersistentString
-               value = "self.dataArray">
+               value = "indexPath.length">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -79,6 +79,14 @@
          <PersistentStrings>
             <PersistentString
                value = "m_toiletPhotoUrl">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "map.RegisterViewController.viewDidLoad (map.RegisterViewController)() -&gt; ():RegisterViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "tissueImage?.description">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

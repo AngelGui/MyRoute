@@ -6,11 +6,15 @@
 //  Copyright (c) 2014 AutoNavi. All rights reserved.
 
 import UIKit
+import Alamofire
+
 
 @IBDesignable
 class MainViewController: UIViewController, MAMapViewDelegate{
     
     var mapView: MAMapView?
+    var userLat: CLLocationDegrees?
+    var userLon: CLLocationDegrees?
     var locationButton: UIButton?
     var imageLocated: UIImage?
     var imageNotLocate: UIImage?
@@ -22,6 +26,7 @@ class MainViewController: UIViewController, MAMapViewDelegate{
     var tip0Bt = UIButton()
     var tip1Bt = UIButton()
     var tip10Bt = UIButton()
+    var userTip: Int? = 0
     var voiceBt = UIButton()
     var gotoWCBt = UIButton()
     var giveWCBt = UIButton()
@@ -144,7 +149,7 @@ class MainViewController: UIViewController, MAMapViewDelegate{
         tipLabel.frame = CGRect(x: 15, y: self.view.frame.height-160, width: 100, height: 20)
         tipLabel.backgroundColor = UIColor.whiteColor()
         tipLabel.font = UIFont.systemFontOfSize(15)
-//        tipLabel.autoresizingMask = UIViewAutoresizing.FlexibleHeight | UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleLeftMargin
+//      tipLabel.autoresizingMask = UIViewAutoresizing.FlexibleHeight | UIViewAutoresizing.FlexibleWidth | UIViewAutoresizing.FlexibleLeftMargin
         self.view.addSubview(tipLabel)
         
         var tip0Image = UIImage(named: "0yuan2.png")
@@ -264,14 +269,17 @@ class MainViewController: UIViewController, MAMapViewDelegate{
             sender.setImage(UIImage(named: "0yuan2.png"), forState: UIControlState.Normal)
             tip1Bt.setImage(UIImage(named: "1yuan1.png"), forState: UIControlState.Normal)
             tip10Bt.setImage(UIImage(named: "10yuan1.png"), forState: UIControlState.Normal)
+            userTip = 0
         case tip1Bt:
             sender.setImage(UIImage(named: "1yuan2.png"), forState: UIControlState.Normal)
             tip0Bt.setImage(UIImage(named: "0yuan1.png"), forState: UIControlState.Normal)
             tip10Bt.setImage(UIImage(named: "10yuan1.png"), forState: UIControlState.Normal)
+            userTip = 1
         case tip10Bt:
             sender.setImage(UIImage(named: "10yuan2.png"), forState: UIControlState.Normal)
             tip0Bt.setImage(UIImage(named: "0yuan1.png"), forState: UIControlState.Normal)
             tip1Bt.setImage(UIImage(named: "1yuan1.png"), forState: UIControlState.Normal)
+            userTip = 10
         default:
             sender.setImage(UIImage(named: "0yuan2.png"), forState: UIControlState.Normal)
         }
@@ -302,15 +310,63 @@ class MainViewController: UIViewController, MAMapViewDelegate{
     //MARK:---切换到倒计时界面或者是厕主注册界面---
     var m_CountDownVC: CountDownViewController!
     var m_RegisterVC: RegisterViewController!
-
+    //-------------------------------------------------
+    // 用户发送订单并解析返回数据，判断是否发送订单成功
+    //-------------------------------------------------
+    var m_isSubmitSuccess: Bool =  false
     func changeToCountDown(sender:UIButton) {
-    
+
+        var user: UserInformation! = UserInformation.shareInstance()
         if sender == gotoWCBt
         {
-            m_CountDownVC = CountDownViewController()
-            m_CountDownVC!.title = "等待应答"
-            // self.presentViewController(m_CountDownVC, animated: true, completion: nil)
-            self.navigationController?.pushViewController(m_CountDownVC, animated: true)
+            Alamofire.request(.POST, "用户发送订单接口",
+                parameters: ["UserID":user.m_id,
+                    "UserTip":userTip,
+                    "UserLat":userLat,
+                    "UserLon":userLon ])
+                .responseString { (request, response, string, error) in
+                    
+                    println("\n\n======注册数据===========")
+                    
+                    println("--- request: --- \n \(request)")
+                    println("--- response: --- \n \(response)")
+                    println("--- data: --- \n \(data)")
+                    println("--- error:  --- \n \(error)")
+                    
+                    /*
+                    //下行参数：
+                    发送成功: {"result": [ {"hbCode":10, "state":1} ]}
+                    发送失败: {"result": [ {"hbCode":0,  "state":1} ]}
+                    */
+//                    var resultDicData = data as NSDictionary
+//                    var resultLoginArray = resultDicData.objectForKey("result") as NSArray
+//                    println("resultLoginArray : \(resultLoginArray)")
+//                    
+//                    var resultDic = resultLoginArray.objectAtIndex(0) as NSDictionary
+//                    println("resultDic : \(resultDic)")
+//                    
+//                    if 10 == resultDic.objectForKey("hbCode") as UInt {
+//                        println("注册成功")
+//                        
+//                        self.m_isSubmitSuccess = true
+                    
+                        m_CountDownVC = CountDownViewController()
+                        m_CountDownVC!.title = "等待应答"
+                        // self.presentViewController(m_CountDownVC, animated: true, completion: nil)
+                        self.navigationController?.pushViewController(m_CountDownVC, animated: true)
+//                    }
+//                    else {
+//                        var alert = UIAlertView(title: "错误提示: ",
+//                            message: "发送订单失败",
+//                            delegate: self,
+//                            cancelButtonTitle: "确定")
+//                        alert.show()
+//                        
+//                        self.m_isSubmitSuccess = false
+//                    }                    
+//
+//            }
+            
         }
        if sender == giveWCBt
         {
@@ -370,6 +426,9 @@ class MainViewController: UIViewController, MAMapViewDelegate{
     func mapView(mapView: MAMapView , didUpdateUserLocation userLocation: MAUserLocation ) {
         
                let location: CLLocation = userLocation.location
+               userLat = location.coordinate.latitude
+               userLon = location.coordinate.longitude
+
         /*
         let infoArray: [(String, String)] = [("coordinate", NSString(format: "<%.4f, %.4f>", location.coordinate.latitude, location.coordinate.longitude)),
             ("speed", NSString(format: "%.2fm/s(%.2fkm/h)", location.speed, location.speed * 3.6)),
